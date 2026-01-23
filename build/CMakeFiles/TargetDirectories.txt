@@ -1,0 +1,3 @@
+/home/lw/Workspace/CameraPlugin/build/CMakeFiles/CameraPlugin.dir
+/home/lw/Workspace/CameraPlugin/build/CMakeFiles/edit_cache.dir
+/home/lw/Workspace/CameraPlugin/build/CMakeFiles/rebuild_cache.dir

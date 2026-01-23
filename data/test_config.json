@@ -1,0 +1,18 @@
+{
+    "CameraConfig": {
+        "cameras": [
+            {
+                "id": 1,
+                "name": "AVM_FRONT",
+                "type": "RTP",
+                "rtp_ip": "192.168.1.22",
+                "port": 55022,
+                "dev_device": "",
+                "test_file": "",
+                "width": 1920,
+                "height": 1080,
+                "fps": 30
+            }
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+prefix=/home/lw/Workspace/VideoSource/ThirdParty/uvgRTP_lib
+libdir=/home/lw/Workspace/VideoSource/ThirdParty/uvgRTP_lib/lib
+includedir=/home/lw/Workspace/VideoSource/ThirdParty/uvgRTP_lib/include
+
+Name: uvgrtp
+Description: uvgRTP is an Real-Time Transport Protocol (RTP) library written in C++ with a focus on simple to use and high-efficiency media delivery over the internet
+URL: https://github.com/ultravideo/uvgRTP
+Version: 3.1.6
+CFlags: -I${includedir}  -DUVGRTP_HAVE_GETRANDOM=1 -DUVGRTP_HAVE_SENDMSG=1 -DUVGRTP_HAVE_SENDMMSG=1
+Libs: -L${libdir} -luvgrtp -lpthread
+Requires:
+

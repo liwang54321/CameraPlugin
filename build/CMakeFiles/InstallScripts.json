@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/lw/Workspace/CameraPlugin/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

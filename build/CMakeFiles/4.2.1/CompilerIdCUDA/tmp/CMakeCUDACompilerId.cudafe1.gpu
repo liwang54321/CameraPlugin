@@ -1,0 +1,7 @@
+typedef char __nv_bool;
+# 209 "/usr/lib/gcc-cross/aarch64-linux-gnu/9/include/stddef.h" 3
+typedef unsigned long size_t;
+#include "crt/device_runtime.h"
+# 258 "/usr/aarch64-linux-gnu/include/c++/9/aarch64-linux-gnu/bits/c++config.h" 3
+typedef unsigned long _ZSt6size_t;
+#include "common_functions.h"
