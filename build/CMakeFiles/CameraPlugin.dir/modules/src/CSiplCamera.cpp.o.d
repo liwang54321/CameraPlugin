@@ -354,7 +354,6 @@ CMakeFiles/CameraPlugin.dir/modules/src/CSiplCamera.cpp.o: \
  /home/lw/Workspace/CameraPlugin/config/include/CConfig.hpp \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/unordered_set \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/unordered_set.h \
- /home/lw/Workspace/CameraPlugin/utils/include/Common.hpp \
  /home/lw/Workspace/CameraPlugin/control_channel/include/CControlChannelManager.hpp \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/queue \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_queue.h \
@@ -371,8 +370,9 @@ CMakeFiles/CameraPlugin.dir/modules/src/CSiplCamera.cpp.o: \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/future \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/atomic_futex.h \
  /home/lw/Workspace/CameraPlugin/utils/include/CUtils.hpp \
- /home/lw/Workspace/CameraPlugin/utils/include/CTimer.hpp \
- /home/lw/Workspace/CameraPlugin/utils/include/CThreadPool.hpp \
  /home/lw/Workspace/CameraPlugin/config/include/COptionParser.hpp \
  /home/lw/Workspace/CameraPlugin/core/include/CPeerValidator.hpp \
+ /home/lw/Workspace/CameraPlugin/utils/include/CTimer.hpp \
+ /home/lw/Workspace/CameraPlugin/utils/include/CThreadPool.hpp \
+ /home/lw/Workspace/CameraPlugin/utils/include/Common.hpp \
  /home/lw/Workspace/CameraPlugin/modules/include/CSiplModuleCallback.hpp

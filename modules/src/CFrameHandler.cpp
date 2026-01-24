@@ -40,6 +40,9 @@ std::string CFrameHandler::GetCameraDirName()
 
 std::unique_ptr<CFrameHandler> CreateFrameHandler(FileSourceType type,
                                                   const std::string &sFilePath,
+                                                  const std::string &src_ip,
+                                                  uint16_t src_port,
+                                                  const std::string &dst_ip,
                                                   uint32_t uWidth,
                                                   uint32_t uHeight,
                                                   int sensorId,
@@ -49,7 +52,7 @@ std::unique_ptr<CFrameHandler> CreateFrameHandler(FileSourceType type,
         return std::make_unique<CFrameReader>(type, sFilePath, uWidth, uHeight, sensorId);
     } else if (type == FileSourceType::H264 || type == FileSourceType::H265) {
 #if !NV_IS_SAFETY
-        return std::make_unique<CFrameDecoder>(type, sFilePath, uWidth, uHeight, sensorId, uInstanceId);
+        return std::make_unique<CFrameDecoder>(type, src_ip, src_port, dst_ip, uWidth, uHeight, sensorId, uInstanceId);
 #else
         LOG_ERR("CreateFrameHandler: Decoding is not supported on safety platform!\n");
         return nullptr;

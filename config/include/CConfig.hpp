@@ -1,6 +1,6 @@
 /*
- * SPDX-FileCopyrightText: Copyright (c) 2023-2025 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
- * SPDX-License-Identifier: LicenseRef-NvidiaProprietary
+ * SPDX-FileCopyrightText: Copyright (c) 2023-2025 NVIDIA CORPORATION & AFFILIATES. All rights
+ * reserved. SPDX-License-Identifier: LicenseRef-NvidiaProprietary
  *
  * NVIDIA CORPORATION, its affiliates and licensors retain all intellectual
  * property and proprietary rights in and to this material, related
@@ -16,13 +16,34 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include "nverror.h"
-#include "Common.hpp"
-#include "CUtils.hpp"
 #include "CControlChannelManager.hpp"
-#include "CTimer.hpp"
 #include "COptionParser.hpp"
 #include "CPeerValidator.hpp"
+#include "CTimer.hpp"
+#include "CUtils.hpp"
+#include "Common.hpp"
+#include "nverror.h"
+
+struct CameraConfig {
+    uint32_t id;
+    std::string name;
+    std::string type;
+    std::string rtp_ip;
+    uint16_t port;
+    std::string dev_device;
+    std::string test_file;
+    uint32_t width;
+    uint32_t height;
+    uint8_t fps;
+};
+
+struct CameraConfigs {
+    std::vector<CameraConfig> config;
+};
+struct CameraStatus {
+    CameraConfig config;
+    bool is_open = false;
+};
 
 using namespace nvsipl;
 using PipelineDescriptor = std::vector<std::vector<std::string>>;
@@ -134,6 +155,28 @@ class CAppCfg
     void SetCudaRunningFlag(bool bRunning) { m_bCudaRunning = bRunning; };
     bool IsCudaRunningEnabled() const { return m_bCudaRunning; };
 
+    using CameraCallback =
+    std::function<void(uint32_t cameraId, uint64_t timestamp, const uint8_t *payload, size_t size)>;
+    void RegisterCameraPlugin(CameraCallback cb) {
+        cb_ = std::move(cb);
+    }
+
+    void CallCameraPlugin(uint32_t cameraId, uint64_t timestamp, const uint8_t *payload, size_t size) {
+        if(cb_) cb_(cameraId, timestamp, payload, size);
+    }
+
+    void RegisterModuleInfo(const std::map<uint8_t, CameraStatus>& camera_configs)
+     {
+        camera_configs_ = camera_configs;
+     }
+
+     std::optional<CameraConfig> GetCameraConfig(uint8_t index) {
+        if (camera_configs_.find(index) == camera_configs_.end()) {
+            return std::nullopt;
+        }
+        return camera_configs_[index].config;
+     }
+
     friend class CCmdLineParser;
 
   private:
@@ -154,7 +197,8 @@ class CAppCfg
     std::vector<CameraModuleInfo> m_vCameraModules;
     PipelineCfgTable m_pipelineCfgTable;
     std::vector<PipelineGroup> m_vPipelineGroups;
-
+    CameraCallback cb_;
+    std::map<uint8_t, CameraStatus> camera_configs_;
     // switch flag
     bool m_bIgnoreError = false;
     bool m_bShowVersion = false;

@@ -1,6 +1,6 @@
 /*
- * SPDX-FileCopyrightText: Copyright (c) 2022-2025 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
- * SPDX-License-Identifier: LicenseRef-NvidiaProprietary
+ * SPDX-FileCopyrightText: Copyright (c) 2022-2025 NVIDIA CORPORATION & AFFILIATES. All rights
+ * reserved. SPDX-License-Identifier: LicenseRef-NvidiaProprietary
  *
  * NVIDIA CORPORATION, its affiliates and licensors retain all intellectual
  * property and proprietary rights in and to this material, related
@@ -13,28 +13,27 @@
 #ifndef CCLIENTCOMMON_H
 #define CCLIENTCOMMON_H
 
-#include <string.h>
-#include <iostream>
-#include <cstdarg>
 #include <atomic>
 #include <condition_variable>
+#include <cstdarg>
+#include <cstring>
+#include <iostream>
+#include <string.h>
 #include <thread>
 #include <unistd.h>
-#include <cstring>
 
-#include "nvscistream.h"
-#include "CUtils.hpp"
-#include "Common.hpp"
 #include "CConfig.hpp"
 #include "CEventHandler.hpp"
 #include "CProfiler.hpp"
+#include "CUtils.hpp"
+#include "Common.hpp"
+#include "nvscistream.h"
 
 constexpr NvSciStreamCookie cookieBase = 0xC00C1E4U;
 constexpr uint32_t kHeartBeatIntervalMs = 100U;
 
 // Define Packet struct which is used by the client
-typedef struct
-{
+typedef struct {
     /* The client's handle for the packet */
     NvSciStreamCookie cookie;
     /* The NvSciStream's Handle for the packet */
@@ -45,8 +44,7 @@ typedef struct
 } ClientPacket;
 
 // Define Packet struct which is used by the client
-typedef struct
-{
+typedef struct {
     /* Packet index */
     uint32_t uPacketIndex;
     /* Multi element post fence */
@@ -55,31 +53,21 @@ typedef struct
     std::vector<uint32_t> vElementIndexs;
 } MultiPostInfo;
 
-struct MetaData
-{
+struct MetaData {
     static constexpr uint32_t kMaxROIRegions = 64U;
 
-  public:
-    MetaData(uint64_t uFrameCaptureTSC = 0,
-             uint64_t uFrameCaptureStartTSC = 0,
-             bool bFrameSeqNumValid = false,
-             uint64_t uFrameSequenceNumber = 0,
-             uint64_t uSendTSC = 0,
-             uint64_t uReceiveTSC = 0,
-             bool bTriggerEncodingValid = false,
-             bool bTriggerEncoding = false)
-    {
-        Set(uFrameCaptureTSC, uFrameCaptureStartTSC, bFrameSeqNumValid, uFrameSequenceNumber, uSendTSC,
-            uReceiveTSC, bTriggerEncodingValid, bTriggerEncoding);
+public:
+    MetaData(uint64_t uFrameCaptureTSC = 0, uint64_t uFrameCaptureStartTSC = 0,
+             bool bFrameSeqNumValid = false, uint64_t uFrameSequenceNumber = 0,
+             uint64_t uSendTSC = 0, uint64_t uReceiveTSC = 0, bool bTriggerEncodingValid = false,
+             bool bTriggerEncoding = false) {
+        Set(uFrameCaptureTSC, uFrameCaptureStartTSC, bFrameSeqNumValid, uFrameSequenceNumber,
+            uSendTSC, uReceiveTSC, bTriggerEncodingValid, bTriggerEncoding);
     }
 
-    void Set(uint64_t uFrameCaptureTSC = 0,
-             uint64_t uFrameCaptureStartTSC = 0,
-             bool bFrameSeqNumValid = false,
-             uint64_t uFrameSequenceNumber = 0,
-             uint64_t uSendTSC = 0,
-             uint64_t uReceiveTSC = 0,
-             bool bTriggerEncodingValid = false,
+    void Set(uint64_t uFrameCaptureTSC = 0, uint64_t uFrameCaptureStartTSC = 0,
+             bool bFrameSeqNumValid = false, uint64_t uFrameSequenceNumber = 0,
+             uint64_t uSendTSC = 0, uint64_t uReceiveTSC = 0, bool bTriggerEncodingValid = false,
              bool bTriggerEncoding = false)
 
     {
@@ -96,16 +84,16 @@ struct MetaData
         this->bTriggerEncoding = bTriggerEncoding;
     }
 
-    std::string ToString()
-    {
-        std::string sMetaDataString = "FrameCaptureTSC=" + std::to_string(uFrameCaptureTSC) +
-                                      " FrameCaptureStartTSC=" + std::to_string(uFrameCaptureStartTSC) +
-                                      " FrameSendTSC=" + std::to_string(uSendTSC) +
-                                      " FrameReceiveTSC=" + std::to_string(uReceiveTSC) +
-                                      " FrameSeqNumValid=" + std::to_string(bFrameSeqNumValid) +
-                                      " FrameSequenceNumber=" + std::to_string(uFrameSequenceNumber) +
-                                      " TriggerEncodingValid=" + std::to_string(bTriggerEncodingValid) +
-                                      " TriggerEncoding=" + std::to_string(bTriggerEncoding);
+    std::string ToString() {
+        std::string sMetaDataString =
+            "FrameCaptureTSC=" + std::to_string(uFrameCaptureTSC) +
+            " FrameCaptureStartTSC=" + std::to_string(uFrameCaptureStartTSC) +
+            " FrameSendTSC=" + std::to_string(uSendTSC) +
+            " FrameReceiveTSC=" + std::to_string(uReceiveTSC) +
+            " FrameSeqNumValid=" + std::to_string(bFrameSeqNumValid) +
+            " FrameSequenceNumber=" + std::to_string(uFrameSequenceNumber) +
+            " TriggerEncodingValid=" + std::to_string(bTriggerEncodingValid) +
+            " TriggerEncoding=" + std::to_string(bTriggerEncoding);
 
         return sMetaDataString;
     }
@@ -134,68 +122,58 @@ struct MetaData
     bool bTriggerEncoding;
 };
 
-struct IpcEntity
-{
+struct IpcEntity {
     NvSciIpcEndpoint endPoint = 0U;
     NvSciStreamBlock ipcBlock = 0U;
     uint32_t uLimitNum = 0U;
     NvSciStreamBlock limiterBlock = 0U;
 };
 
-enum class HeartBeatMsgType : uint8_t
-{
-    CONNECT_REQUEST,
-    HEARTBEAT,
-    DISCONNECT_REQUEST
-};
+enum class HeartBeatMsgType : uint8_t { CONNECT_REQUEST, HEARTBEAT, DISCONNECT_REQUEST };
 
-class CClientCommon
-{
-  public:
-    class IModuleCallback
-    {
-      public:
+class CClientCommon {
+public:
+    class IModuleCallback {
+    public:
         virtual NvError ProcessPayload(CClientCommon *pClient, uint32_t uPacketIndex) = 0;
-        virtual NvError
-        ProcessPayload(std::vector<NvSciBufObj> &vSrcBufObjs, NvSciBufObj dstBufObj, MetaData *pMetaData = nullptr) = 0;
+        virtual NvError ProcessPayload(std::vector<NvSciBufObj> &vSrcBufObjs, NvSciBufObj dstBufObj,
+                                       MetaData *pMetaData = nullptr) = 0;
         virtual NvError OnProcessPayloadDone(CClientCommon *pClient, uint32_t uPacketIndex) = 0;
-        virtual NvError OnPacketGotten(CClientCommon *pClient, uint32_t uPacketIndex, bool *pHandled = nullptr) = 0;
+        virtual NvError OnPacketGotten(CClientCommon *pClient, uint32_t uPacketIndex,
+                                       bool *pHandled = nullptr) = 0;
 
-        virtual NvError InsertPrefence(CClientCommon *pClient,
-                                       PacketElementType userType,
-                                       uint32_t uPacketIndex,
-                                       NvSciSyncFence *pPrefence) = 0;
+        virtual NvError InsertPrefence(CClientCommon *pClient, PacketElementType userType,
+                                       uint32_t uPacketIndex, NvSciSyncFence *pPrefence) = 0;
         virtual NvError SetEofSyncObj(CClientCommon *pClient) = 0;
         virtual NvError GetEofSyncFence(CClientCommon *pClient, NvSciSyncFence *pPostfence) = 0;
-        virtual NvError OnDataBufAttrListRecvd(CClientCommon *pClient, NvSciBufAttrList bufAttrList) = 0;
+        virtual NvError OnDataBufAttrListRecvd(CClientCommon *pClient,
+                                               NvSciBufAttrList bufAttrList) = 0;
         virtual NvError OnWaiterAttrEventRecvd(CClientCommon *pClient, bool &bHandled) = 0;
-        virtual NvError
-        FillDataBufAttrList(CClientCommon *pClient, PacketElementType userType, NvSciBufAttrList *pBufAttrList) = 0;
-        virtual NvError FillMetaBufAttrList(CClientCommon *pClient, NvSciBufAttrList *pBufAttrList) = 0;
-        virtual NvError FillSyncSignalerAttrList(CClientCommon *pClient,
-                                                 PacketElementType userType,
+        virtual NvError FillDataBufAttrList(CClientCommon *pClient, PacketElementType userType,
+                                            NvSciBufAttrList *pBufAttrList) = 0;
+        virtual NvError FillMetaBufAttrList(CClientCommon *pClient,
+                                            NvSciBufAttrList *pBufAttrList) = 0;
+        virtual NvError FillSyncSignalerAttrList(CClientCommon *pClient, PacketElementType userType,
                                                  NvSciSyncAttrList *pSignalerAttrList) = 0;
-        virtual NvError FillSyncWaiterAttrList(CClientCommon *pClient,
-                                               PacketElementType userType,
+        virtual NvError FillSyncWaiterAttrList(CClientCommon *pClient, PacketElementType userType,
                                                NvSciSyncAttrList *pWaiterAttrList) = 0;
-        virtual NvError
-        RegisterSignalSyncObj(CClientCommon *pClient, PacketElementType userType, NvSciSyncObj signalSyncObj) = 0;
-        virtual NvError
-        RegisterWaiterSyncObj(CClientCommon *pClient, PacketElementType userType, NvSciSyncObj waiterSyncObj) = 0;
-        virtual NvError RegisterBufObj(CClientCommon *pClient,
-                                       PacketElementType userType,
-                                       uint32_t uPacketIndex,
-                                       NvSciBufObj bufObj) = 0;
+        virtual NvError RegisterSignalSyncObj(CClientCommon *pClient, PacketElementType userType,
+                                              NvSciSyncObj signalSyncObj) = 0;
+        virtual NvError RegisterWaiterSyncObj(CClientCommon *pClient, PacketElementType userType,
+                                              NvSciSyncObj waiterSyncObj) = 0;
+        virtual NvError RegisterBufObj(CClientCommon *pClient, PacketElementType userType,
+                                       uint32_t uPacketIndex, NvSciBufObj bufObj) = 0;
         virtual NvError GetMinPacketCount(CClientCommon *pClient, uint32_t *uPacketCount) = 0;
         virtual void OnEvent(CClientCommon *pClient, EventStatus event) = 0;
         virtual void OnError(int moduleId, uint32_t errorId) = 0;
 
-      protected:
+    protected:
         IModuleCallback() = default;
         virtual ~IModuleCallback() = default;
     };
 
-    CClientCommon(std::shared_ptr<CClientCfg> spClientCfg, CClientCommon::IModuleCallback *pCallback);
+    CClientCommon(std::shared_ptr<CClientCfg> spClientCfg,
+                  CClientCommon::IModuleCallback *pCallback);
     virtual ~CClientCommon();
 
     virtual NvError Init();
@@ -215,21 +193,26 @@ class CClientCommon
                                  std::shared_ptr<CClientCommon> spDstClient);
     NvSciBufObj *GetBufObj(uint32_t uPacketIndex);
     MetaData *GetMetaPtr(NvSciBufObj bufObj);
-    NvError AllocSignalSyncObj(std::vector<NvSciSyncAttrList> &vUnreconciledAttrLists, NvSciSyncObj *pSignalSyncObj);
+    NvError AllocSignalSyncObj(std::vector<NvSciSyncAttrList> &vUnreconciledAttrLists,
+                               NvSciSyncObj *pSignalSyncObj);
     NvError RecvWaiterAttr(ElemSyncAttr &elemSyncAttr);
     NvError RegisterSignalSyncObj(NvSciSyncObj signalSyncObj);
     NvError ExportSignalSyncObj(NvSciSyncObj syncObj);
     NvError GetElemIndexByUserType(PacketElementType userType, uint32_t &uElementIndex);
     NvSciError IsPostFenceExpired(NvSciSyncFence *pFence);
 
-  protected:
+protected:
     virtual NvError FillBufAttrList(PacketElementType userType, NvSciBufAttrList *pBufAttrList);
-    virtual NvError FillSyncWaiterAttrList(PacketElementType userType, NvSciSyncAttrList *pWaiterAttrList);
+    virtual NvError FillSyncWaiterAttrList(PacketElementType userType,
+                                           NvSciSyncAttrList *pWaiterAttrList);
     virtual NvError RegisterSignalSyncObj(uint32_t uElemId, NvSciSyncObj signalSyncObj);
     virtual NvError RegisterWaiterSyncObj(uint32_t uElemId, NvSciSyncObj waiterSyncObj);
-    virtual NvError OnPacketCreated(const std::vector<ElemBufObj> &vElemBufObjs) { return NvError_Success; }
+    virtual NvError OnPacketCreated(const std::vector<ElemBufObj> &vElemBufObjs) {
+        return NvError_Success;
+    }
     virtual NvError GetConnectBlock(NvSciStreamBlock *pBlock) = 0;
-    virtual void MapDataBuffer(PacketElementType userType, uint32_t uPacketIndex, NvSciBufObj bufObj);
+    virtual void MapDataBuffer(PacketElementType userType, uint32_t uPacketIndex,
+                               NvSciBufObj bufObj);
     virtual NvError MapMetaBuffer(uint32_t uPacketIndex, NvSciBufObj bufObj);
     virtual NvError MapPayload(void *pBuffer, uint32_t &uPacketIndex, uint32_t &uElementId);
 
@@ -238,17 +221,18 @@ class CClientCommon
     virtual NvError HandleSyncExport();
     virtual NvError HandlePayload() = 0;
 
-    virtual NvError OnBufAttrListRecvd(const ElemBufAttr (&elemBufAttrs)[MAX_NUM_ELEMENTS], const uint32_t uNumElems);
+    virtual NvError OnBufAttrListRecvd(const ElemBufAttr (&elemBufAttrs)[MAX_NUM_ELEMENTS],
+                                       const uint32_t uNumElems);
     virtual NvError SetUnusedElement(uint32_t uElemIndex) { return NvError_Success; }
-    virtual NvError CollectWaiterAttrList(uint32_t uElementId, std::vector<NvSciSyncAttrList> &vUnreconciledAttrList);
+    virtual NvError CollectWaiterAttrList(uint32_t uElementId,
+                                          std::vector<NvSciSyncAttrList> &vUnreconciledAttrList);
     virtual uint32_t GetWaitSyncObjCount() { return 1; }
     virtual NvError OnConnected() { return NvError_Success; };
 
     NvError SetMetaBufAttrList(NvSciBufAttrList &bufAttrList);
     NvError GetElemIdByUserType(PacketElementType userType, uint32_t &uElementId);
 
-    inline NvError GetIndexFromCookie(NvSciStreamCookie cookie, uint32_t &uIndex)
-    {
+    inline NvError GetIndexFromCookie(NvSciStreamCookie cookie, uint32_t &uIndex) {
         if (cookie <= cookieBase) {
             PLOG_ERR("invalid cookie assignment\n");
             return NvError_BadParameter;
@@ -256,8 +240,7 @@ class CClientCommon
         uIndex = static_cast<uint32_t>(cookie - cookieBase) - 1U;
         return NvError_Success;
     }
-    inline ClientPacket *GetPacketByCookie(const NvSciStreamCookie &cookie)
-    {
+    inline ClientPacket *GetPacketByCookie(const NvSciStreamCookie &cookie) {
         uint32_t uId = 0U;
         auto error = GetIndexFromCookie(cookie, uId);
         PLOG_DBG("GetPacketByCookie: packetId: %u\n", uId);
@@ -267,14 +250,12 @@ class CClientCommon
         return &(m_packets[uId]);
     }
     // Decide the cookie for the new packet
-    inline NvSciStreamCookie AssignPacketCookie()
-    {
+    inline NvSciStreamCookie AssignPacketCookie() {
         NvSciStreamCookie cookie = cookieBase + static_cast<NvSciStreamCookie>(m_uNumPacket);
         return cookie;
     }
 
-    inline bool IsClearedFence(NvSciSyncFence *pFence)
-    {
+    inline bool IsClearedFence(NvSciSyncFence *pFence) {
         uint64_t id;
         uint64_t value;
 
@@ -291,7 +272,7 @@ class CClientCommon
     NvSciSyncObj m_waiterSyncObjs[MAX_WAIT_SYNCOBJ][MAX_NUM_ELEMENTS];
     NvSciSyncCpuWaitContext m_cpuWaitPreContext = nullptr;
     NvSciSyncCpuWaitContext m_cpuWaitPostContext = nullptr;
-    void *m_metaPtrs[MAX_NUM_PACKETS] = { nullptr };
+    void *m_metaPtrs[MAX_NUM_PACKETS] = {nullptr};
 
     CAppCfg *m_pAppCfg = nullptr;
     std::shared_ptr<CClientCfg> m_spClientCfg;
@@ -323,11 +304,11 @@ class CClientCommon
     uint32_t m_uDataElemId = MAX_NUM_ELEMENTS;
     CommType m_eCommType = CommType::IntraProcess;
 
-    std::atomic<bool> m_bStop{ true };
-    std::shared_ptr<CControlChannelManager> m_spControlChannel = { nullptr };
-    std::shared_ptr<CTimer> m_spTimer = { nullptr };
+    std::atomic<bool> m_bStop{true};
+    std::shared_ptr<CControlChannelManager> m_spControlChannel = {nullptr};
+    std::shared_ptr<CTimer> m_spTimer = {nullptr};
 
-  private:
+private:
     EventStatus HandleConnectEvent();
     EventStatus HandleClientEvent();
     EventStatus HandleEvent();
@@ -337,11 +318,11 @@ class CClientCommon
     NvError HandleSyncImport();
 
     NvError AllocSignalSyncObj(std::vector<NvSciSyncAttrList> &vUnreconciledAttrLists,
-                               uint32_t uElemIndex,
-                               NvSciSyncObj *pSignalSyncObj);
+                               uint32_t uElemIndex, NvSciSyncObj *pSignalSyncObj);
     NvError SetSignalSyncObj(uint32_t uElementId, NvSciSyncObj signalSyncObj);
     EventStatus CheckConnection();
-    NvError SetCpuSyncAttrList(NvSciSyncAttrList attrList, NvSciSyncAccessPerm cpuPerm, bool bCpuSync);
+    NvError SetCpuSyncAttrList(NvSciSyncAttrList attrList, NvSciSyncAccessPerm cpuPerm,
+                               bool bCpuSync);
 
     std::unique_ptr<CEventHandler<CClientCommon>> m_upEventHandler;
 };

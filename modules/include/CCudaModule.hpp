@@ -79,6 +79,7 @@ class CCudaModule : public CBaseModule
   private:
     NvError InitCuda();
     NvError BlToPlConvert(uint32_t uPacketIndex, void *pDstptr);
+    NvError BlToPlConvertWithGPU(uint32_t uPacketIndex, void *pDstPtr);
 
     static int m_cudaDeviceId;
 
@@ -96,7 +97,8 @@ class CCudaModule : public CBaseModule
     static const std::unordered_map<std::string, Option> m_cudaOptionTable;
     CUDAInputInfo m_cudaInputInfo;
     void *m_pCvtDevPtrs;
-
+    void *output_buffer_;
+    uint32_t image_size_ = 0;
 #if BUILD_CARDETECT
     // Only support Linux and QNX standard
     NvError DoInference(uint32_t uPacketIndex); // use for block linear

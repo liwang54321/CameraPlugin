@@ -373,8 +373,8 @@ CMakeFiles/CameraPlugin.dir/modules/src/CFrameReader.cpp.o: \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/future \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/atomic_futex.h \
  /home/lw/Workspace/CameraPlugin/utils/include/CUtils.hpp \
- /home/lw/Workspace/CameraPlugin/utils/include/CTimer.hpp \
- /home/lw/Workspace/CameraPlugin/utils/include/CThreadPool.hpp \
  /home/lw/Workspace/CameraPlugin/config/include/COptionParser.hpp \
  /home/lw/Workspace/CameraPlugin/core/include/CPeerValidator.hpp \
+ /home/lw/Workspace/CameraPlugin/utils/include/CTimer.hpp \
+ /home/lw/Workspace/CameraPlugin/utils/include/CThreadPool.hpp \
  /home/lw/Workspace/CameraPlugin/modules/include/CFrameHandler.hpp

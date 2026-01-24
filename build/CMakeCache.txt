@@ -261,7 +261,7 @@ CameraPlugin_BINARY_DIR:STATIC=/home/lw/Workspace/CameraPlugin/build
 CameraPlugin_IS_TOP_LEVEL:STATIC=ON
 
 //Dependencies for the target
-CameraPlugin_LIB_DEPENDS:STATIC=general;uvgrtp;
+CameraPlugin_LIB_DEPENDS:STATIC=general;uvgrtp;general;cam_fsync;general;nvmedia_iep_sci;general;nvscistream;general;nvmedia2d;general;nvscibuf;general;nvscisync;general;nvsciipc;general;nvscicommon;general;cuda;general;cudart;general;tegrawfd;general;nvsipl;general;nvsipl_query;general;nvmedia_ide_parser;general;nvmedia_ide_sci;
 
 //Value Computed by CMake
 CameraPlugin_SOURCE_DIR:STATIC=/home/lw/Workspace/CameraPlugin

@@ -68,13 +68,39 @@ CMakeFiles/CameraPlugin.dir/core/src/CPassthroughProducer.cpp.o: \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/range_access.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/deque.tcc \
  /home/lw/Workspace/CameraPlugin/core/include/CClientCommon.hpp \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/string.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/condition_variable \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/chrono \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/ratio \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/cstdint \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/limits \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/ctime \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/time.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/time.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/timex.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/struct_timeval.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/clock_t.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/time_t.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/struct_tm.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/struct_timespec.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/endian.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/endianness.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/clockid_t.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/timer_t.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/struct_itimerspec.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/locale_t.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/__locale_t.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/strings.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/iostream \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/ostream \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/ios \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/parse_numbers.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/std_mutex.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/system_error \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/aarch64-buildroot-linux-gnu/bits/error_constants.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/cerrno \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/errno.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/errno.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/linux/errno.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/asm/errno.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/asm-generic/errno.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/asm-generic/errno-base.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/error_t.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/iosfwd \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stringfwd.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/postypes.h \
@@ -88,8 +114,9 @@ CMakeFiles/CameraPlugin.dir/core/src/CPassthroughProducer.cpp.o: \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/__mbstate_t.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/__FILE.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/FILE.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/stdexcept \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/string \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/char_traits.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/cstdint \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/localefwd.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/aarch64-buildroot-linux-gnu/bits/c++locale.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/clocale \
@@ -97,28 +124,19 @@ CMakeFiles/CameraPlugin.dir/core/src/CPassthroughProducer.cpp.o: \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/locale.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/cctype \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/ctype.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/endian.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/endianness.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/ios_base.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/ostream_insert.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/cxxabi_forced.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_function.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/backward/binders.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/basic_string.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/ext/atomicity.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/aarch64-buildroot-linux-gnu/bits/gthr.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/aarch64-buildroot-linux-gnu/bits/gthr-default.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/pthread.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/sched.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/time_t.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/struct_timespec.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/sched.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/struct_sched_param.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/cpu-set.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/time.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/time.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/timex.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/struct_timeval.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/clock_t.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/struct_tm.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/clockid_t.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/timer_t.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/struct_itimerspec.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/pthreadtypes.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/thread-shared-types.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/pthreadtypes-arch.h \
@@ -126,15 +144,7 @@ CMakeFiles/CameraPlugin.dir/core/src/CPassthroughProducer.cpp.o: \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/struct_rwlock.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/setjmp.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/aarch64-buildroot-linux-gnu/bits/atomic_word.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/locale_classes.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/string \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/ostream_insert.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/cxxabi_forced.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_function.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/backward/binders.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/basic_string.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/string_view \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/limits \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/functional_hash.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/string_view.tcc \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/ext/string_conversions.h \
@@ -161,19 +171,29 @@ CMakeFiles/CameraPlugin.dir/core/src/CPassthroughProducer.cpp.o: \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/cookie_io_functions_t.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/stdio_lim.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/sys_errlist.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/cerrno \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/errno.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/errno.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/linux/errno.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/asm/errno.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/asm-generic/errno.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/asm-generic/errno-base.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/error_t.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/basic_string.tcc \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/unique_lock.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/ext/concurrence.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/unique_ptr.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/tuple \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/array \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/uses_allocator.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/invoke.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/shared_ptr.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/shared_ptr_base.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/allocated_ptr.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/refwrap.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/ext/aligned_buffer.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/cstdarg \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/cstring \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/string.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/strings.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/iostream \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/ostream \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/ios \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/ios_base.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/locale_classes.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/locale_classes.tcc \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/system_error \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/aarch64-buildroot-linux-gnu/bits/error_constants.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/stdexcept \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/streambuf \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/streambuf.tcc \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/basic_ios.h \
@@ -189,25 +209,6 @@ CMakeFiles/CameraPlugin.dir/core/src/CPassthroughProducer.cpp.o: \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/ostream.tcc \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/istream \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/istream.tcc \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/cstdarg \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/condition_variable \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/chrono \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/ratio \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/ctime \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/parse_numbers.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/std_mutex.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/unique_lock.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/ext/concurrence.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/unique_ptr.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/tuple \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/array \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/uses_allocator.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/invoke.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/shared_ptr.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/shared_ptr_base.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/allocated_ptr.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/refwrap.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/ext/aligned_buffer.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/thread \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/memory \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_tempbuf.h \
@@ -223,26 +224,7 @@ CMakeFiles/CameraPlugin.dir/core/src/CPassthroughProducer.cpp.o: \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/getopt_posix.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/getopt_core.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/unistd_ext.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/cstring \
- /drive/drive-linux/include/nvscistream.h \
- /drive/drive-linux/include/nvscistream_api.h \
- /drive/drive-linux/include/nvscierror.h \
- /drive/drive-linux/include/nvscibuf.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/lib/gcc/aarch64-buildroot-linux-gnu/9.3.0/include/stdbool.h \
- /drive/drive-linux/include/nvsciipc.h \
- /drive/drive-linux/include/nvscievent.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/stdlib.h \
- /drive/drive-linux/include/nvscisync.h \
- /drive/drive-linux/include/nvscistream_types.h \
- /home/lw/Workspace/CameraPlugin/utils/include/CUtils.hpp \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/algorithm \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_algo.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/algorithmfwd.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_heap.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/uniform_int_dist.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/pstl/glue_algorithm_defs.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/functional \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/std_function.h \
+ /home/lw/Workspace/CameraPlugin/config/include/CConfig.hpp \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/unordered_map \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/hashtable.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/hashtable_policy.h \
@@ -251,11 +233,30 @@ CMakeFiles/CameraPlugin.dir/core/src/CPassthroughProducer.cpp.o: \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/enable_special_members.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/unordered_map.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/erase_if.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/unordered_set \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/unordered_set.h \
+ /home/lw/Workspace/CameraPlugin/control_channel/include/CControlChannelManager.hpp \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/mutex \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/queue \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/vector \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_vector.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_bvector.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/vector.tcc \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/mutex \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_heap.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_queue.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/set \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_tree.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_set.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_multiset.h \
+ /home/lw/Workspace/CameraPlugin/control_channel/include/CMsgReader.hpp \
+ /home/lw/Workspace/CameraPlugin/utils/include/CUtils.hpp \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/algorithm \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_algo.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/algorithmfwd.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/uniform_int_dist.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/pstl/glue_algorithm_defs.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/functional \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/std_function.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/regex \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bitset \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/iterator \
@@ -273,7 +274,6 @@ CMakeFiles/CameraPlugin.dir/core/src/CPassthroughProducer.cpp.o: \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/stack \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_stack.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/map \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_tree.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_map.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_multimap.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/regex_constants.h \
@@ -334,7 +334,16 @@ CMakeFiles/CameraPlugin.dir/core/src/CPassthroughProducer.cpp.o: \
  /drive/drive-linux/include/NvSiplControlAutoDef.hpp \
  /drive/drive-linux/include/NvSIPLISPStat.hpp \
  /drive/drive-linux/include/NvSIPLCDICommon.h \
+ /drive/drive-linux/include/nvscisync.h \
+ /drive/drive-linux/include/nvscierror.h \
+ /drive/drive-linux/include/nvsciipc.h \
+ /drive/drive-linux/include/nvscievent.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/stdlib.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/lib/gcc/aarch64-buildroot-linux-gnu/9.3.0/include/stdbool.h \
+ /drive/drive-linux/include/nvscibuf.h \
  /drive/drive-linux/include/nvscistream.h \
+ /drive/drive-linux/include/nvscistream_api.h \
+ /drive/drive-linux/include/nvscistream_types.h \
  /drive/drive-linux/include/NvSIPLInterrupts.hpp \
  /drive/drive-linux/include/INvSiplControlAuto.hpp \
  /drive/drive-linux/include/INvSIPLDeviceInterfaceProvider.hpp \
@@ -346,17 +355,6 @@ CMakeFiles/CameraPlugin.dir/core/src/CPassthroughProducer.cpp.o: \
  /drive/drive-linux/include/nverror.h \
  /drive/drive-linux/include/nverrval.h \
  /home/lw/Workspace/CameraPlugin/utils/include/CLogger.hpp \
- /home/lw/Workspace/CameraPlugin/utils/include/Common.hpp \
- /home/lw/Workspace/CameraPlugin/config/include/CConfig.hpp \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/unordered_set \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/unordered_set.h \
- /home/lw/Workspace/CameraPlugin/control_channel/include/CControlChannelManager.hpp \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/queue \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_queue.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/set \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_set.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_multiset.h \
- /home/lw/Workspace/CameraPlugin/control_channel/include/CMsgReader.hpp \
  /home/lw/Workspace/CameraPlugin/control_channel/include/CMsgCommon.hpp \
  /home/lw/Workspace/CameraPlugin/control_channel/include/CMsgWriter.hpp \
  /home/lw/Workspace/CameraPlugin/control_channel/include/CIpcLinkLinux.hpp \
@@ -366,13 +364,15 @@ CMakeFiles/CameraPlugin.dir/core/src/CPassthroughProducer.cpp.o: \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/future \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/atomic_futex.h \
  /home/lw/Workspace/CameraPlugin/utils/include/CUtils.hpp \
- /home/lw/Workspace/CameraPlugin/utils/include/CTimer.hpp \
- /home/lw/Workspace/CameraPlugin/utils/include/CThreadPool.hpp \
  /home/lw/Workspace/CameraPlugin/config/include/COptionParser.hpp \
  /home/lw/Workspace/CameraPlugin/core/include/CPeerValidator.hpp \
+ /home/lw/Workspace/CameraPlugin/utils/include/CTimer.hpp \
+ /home/lw/Workspace/CameraPlugin/utils/include/CThreadPool.hpp \
+ /home/lw/Workspace/CameraPlugin/utils/include/Common.hpp \
  /home/lw/Workspace/CameraPlugin/core/include/CEventHandler.hpp \
  /home/lw/Workspace/CameraPlugin/core/include/CProfiler.hpp \
  /home/lw/Workspace/CameraPlugin/core/include/CNvPlayfairWrapper.hpp \
+ /drive/drive-linux/include/nvscistream.h \
  /home/lw/Workspace/CameraPlugin/core/include/CPoolManager.hpp \
  /home/lw/Workspace/CameraPlugin/core/include/CPassthroughPoolManager.hpp \
  /home/lw/Workspace/CameraPlugin/core/include/CPassthroughConsumer.hpp \

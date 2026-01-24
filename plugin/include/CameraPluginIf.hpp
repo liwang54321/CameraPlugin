@@ -1,12 +1,11 @@
 #ifndef ICAMERA_PLUGIN_H
 #define ICAMERA_PLUGIN_H
 
-#include <vector>
-#include <functional>
 #include <cstdint>
+#include <functional>
+#include <vector>
 
-class ICameraPlugin
-{
+class ICameraPlugin {
 public:
     virtual ~ICameraPlugin(void) = default;
 
@@ -54,7 +53,8 @@ public:
      * @param function Callback function for camera status changes
      * @return int8_t 0:success, other value:fail
      */
-    virtual int8_t registerStatusCallback(std::function<void(uint32_t cameraId, uint32_t cameraStatus)> function) = 0;
+    virtual int8_t registerStatusCallback(
+        std::function<void(uint32_t cameraId, uint32_t cameraStatus)> function) = 0;
 
     /**
      * @brief Start real-time video stream for camera
@@ -79,7 +79,10 @@ public:
      * @param function Callback function for stream data
      * @return int8_t 0:success, other value:fail
      */
-    virtual int8_t registerStreamCallback(uint32_t cameraId, std::function<void(uint32_t cameraId, uint64_t timestamp, const uint8_t *payload, size_t size)> function) = 0;
+    virtual int8_t registerStreamCallback(uint32_t cameraId,
+                                          std::function<void(uint32_t cameraId, uint64_t timestamp,
+                                                             const uint8_t *payload, size_t size)>
+                                              function) = 0;
 };
 
 #endif // ICAMERA_PLUGIN_H

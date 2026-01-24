@@ -61,4 +61,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/CameraPlugin.dir/DependInfo.cmake"
+  "CMakeFiles/CameraPluginExec.dir/DependInfo.cmake"
   )

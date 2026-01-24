@@ -27,11 +27,13 @@ set(CMAKE_EXE_LINKER_FLAGS      "${QNX_LINKER_FLAGS} -L${CUDA_LIBRARY_DIRS} -Wl,
 
 set(CMAKE_CUDA_HOST_COMPILER /usr/bin/aarch64-linux-gnu-g++)
 set(CUDA_INCLUDE_DIRS ${CUDA_DIR}/targets/aarch64-linux/include)
+set(CUDA_LIB_DIRS ${CUDA_DIR}/targets/aarch64-linux/lib)
 enable_language(CUDA)
 
-
-add_library(CameraPlugin ${CMAKE_CURRENT_SOURCE_DIR}/CameraPlugin.cpp)
-
+add_library(CameraPlugin
+    ${CMAKE_CURRENT_SOURCE_DIR}/plugin/src/CameraPlugin.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/plugin/src/ConfigParser.cpp
+)
 
 if(DEFINED ENV{NV_WORKSPACE})
     set(PDK_PATH "$ENV{NV_WORKSPACE}")
@@ -72,6 +74,8 @@ target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/core/src/CPas
 target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/core/src/CFactory.cpp)
 target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/core/src/CPassthroughPoolManager.cpp)
 target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/core/src/CStatusManager.cpp)
+target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/services/status_manager/src/CStatusManagerClient.cpp)
+target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/services/status_manager/src/CStatusManagerCommon.cpp)
 target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/core/src/CPeerValidator.cpp)
 target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/core/src/CPoolManager.cpp)
 target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/core/src/CBufAggregator.cpp)
@@ -101,11 +105,26 @@ target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/config/src/CO
 target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/config/src/CCmdLineParser.cpp)
 target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/config/src/CConfig.cpp)
 target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/config/src/CElementDescriptionCollector.cpp)
+target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/features/low_power_mode/src/CPvaLowPowerAlgos.cpp)
+target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/utils/src/cudaYUV-NV12.cu)
+target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/utils/src/cvt2d_kernels.cu)
 
 # target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/modules/src/CVulkanSCEngine.cpp)
 # target_sources(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/modules/src/CVulkanSCModule.cpp)
 
-
+target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/uvgRTP/include)
 target_link_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/uvgRTP/lib/)
-
 target_link_libraries(${PROJECT_NAME} PRIVATE uvgrtp)
+target_link_directories(${PROJECT_NAME} PUBLIC ${PDK_PATH}/drive-linux/lib-target)
+target_link_directories(${PROJECT_NAME} PUBLIC ${CUDA_LIB_DIRS})
+target_link_libraries(${PROJECT_NAME} PUBLIC cam_fsync nvmedia_iep_sci nvscistream nvmedia2d nvscibuf nvscisync nvsciipc nvscicommon cuda cudart tegrawfd)
+target_link_libraries(${PROJECT_NAME} PUBLIC nvsipl nvsipl_query nvmedia_ide_parser nvmedia_ide_sci)
+
+add_executable(CameraPluginExec ${CMAKE_CURRENT_SOURCE_DIR}/samples/main.cc)
+target_link_libraries(CameraPluginExec PRIVATE ${PROJECT_NAME})
+target_link_directories(CameraPluginExec PRIVATE ${PDK_PATH}/drive-linux/lib-target)
+# target_link_libraries(CameraPluginExec PRIVATE cam_fsync nvmedia_iep_sci nvmedia_ide_parser nvscistream nvmedia2d nvscibuf nvscisync nvsciipc nvscicommon cuda tegrawfd nvsipl nvsipl_query)
+# target_link_libraries(CameraPluginExec PRIVATE nvmedia_ide_sci nvvideo nvos nvsocsys nvrm_surface nvparser nvscievent nvrm_mem nvvic nvrm_gpu gnat-24 nvrm_host1x nvidia-kms nvsipl_devblk nvfusacap nvsipl_control)
+# target_link_libraries(CameraPluginExec PRIVATE nvidia-kms nvrm_stream nvrm_chip nvrm_sync nvtegrahv nvsipl_devblk_cdi nvsipl_devblk_ddi nvsipl_devblk_crpyto)
+target_link_options(CameraPluginExec PRIVATE "-Wl,-rpath-link=${PDK_PATH}/drive-linux/lib-target/")
+target_include_directories(CameraPluginExec PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/plugin/include)

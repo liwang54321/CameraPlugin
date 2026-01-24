@@ -8,7 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/lw/Workspace/CameraPlugin/CameraPlugin.cpp" "CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.o.d"
+  "/home/lw/Workspace/CameraPlugin/utils/src/cudaYUV-NV12.cu" "CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.o" "gcc" "CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.o.d"
+  "/home/lw/Workspace/CameraPlugin/utils/src/cvt2d_kernels.cu" "CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.o" "gcc" "CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.o.d"
   "/home/lw/Workspace/CameraPlugin/config/src/CCmdLineParser.cpp" "CMakeFiles/CameraPlugin.dir/config/src/CCmdLineParser.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/config/src/CCmdLineParser.cpp.o.d"
   "/home/lw/Workspace/CameraPlugin/config/src/CConfig.cpp" "CMakeFiles/CameraPlugin.dir/config/src/CConfig.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/config/src/CConfig.cpp.o.d"
   "/home/lw/Workspace/CameraPlugin/config/src/CElementDescriptionCollector.cpp" "CMakeFiles/CameraPlugin.dir/config/src/CElementDescriptionCollector.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/config/src/CElementDescriptionCollector.cpp.o.d"
@@ -35,6 +36,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lw/Workspace/CameraPlugin/core/src/CProfiler.cpp" "CMakeFiles/CameraPlugin.dir/core/src/CProfiler.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/core/src/CProfiler.cpp.o.d"
   "/home/lw/Workspace/CameraPlugin/core/src/CStatusManager.cpp" "CMakeFiles/CameraPlugin.dir/core/src/CStatusManager.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/core/src/CStatusManager.cpp.o.d"
   "/home/lw/Workspace/CameraPlugin/core/src/CSyncAggregator.cpp" "CMakeFiles/CameraPlugin.dir/core/src/CSyncAggregator.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/core/src/CSyncAggregator.cpp.o.d"
+  "/home/lw/Workspace/CameraPlugin/features/low_power_mode/src/CPvaLowPowerAlgos.cpp" "CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.o.d"
   "/home/lw/Workspace/CameraPlugin/modules/src/CCudaModule.cpp" "CMakeFiles/CameraPlugin.dir/modules/src/CCudaModule.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/modules/src/CCudaModule.cpp.o.d"
   "/home/lw/Workspace/CameraPlugin/modules/src/CEncModule.cpp" "CMakeFiles/CameraPlugin.dir/modules/src/CEncModule.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/modules/src/CEncModule.cpp.o.d"
   "/home/lw/Workspace/CameraPlugin/modules/src/CFileSourceModule.cpp" "CMakeFiles/CameraPlugin.dir/modules/src/CFileSourceModule.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/modules/src/CFileSourceModule.cpp.o.d"
@@ -48,7 +50,10 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lw/Workspace/CameraPlugin/modules/src/CVirtualDstModule.cpp" "CMakeFiles/CameraPlugin.dir/modules/src/CVirtualDstModule.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/modules/src/CVirtualDstModule.cpp.o.d"
   "/home/lw/Workspace/CameraPlugin/modules/src/CVirtualSrcModule.cpp" "CMakeFiles/CameraPlugin.dir/modules/src/CVirtualSrcModule.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/modules/src/CVirtualSrcModule.cpp.o.d"
   "/home/lw/Workspace/CameraPlugin/modules/src/CWFDDisplayModule.cpp" "CMakeFiles/CameraPlugin.dir/modules/src/CWFDDisplayModule.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/modules/src/CWFDDisplayModule.cpp.o.d"
+  "/home/lw/Workspace/CameraPlugin/plugin/src/CameraPlugin.cpp" "CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.o.d"
   "/home/lw/Workspace/CameraPlugin/plugin/src/ConfigParser.cpp" "CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o.d"
+  "/home/lw/Workspace/CameraPlugin/services/status_manager/src/CStatusManagerClient.cpp" "CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.o.d"
+  "/home/lw/Workspace/CameraPlugin/services/status_manager/src/CStatusManagerCommon.cpp" "CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.o.d"
   "/home/lw/Workspace/CameraPlugin/utils/src/CFileSink.cpp" "CMakeFiles/CameraPlugin.dir/utils/src/CFileSink.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/utils/src/CFileSink.cpp.o.d"
   "/home/lw/Workspace/CameraPlugin/utils/src/CLogger.cpp" "CMakeFiles/CameraPlugin.dir/utils/src/CLogger.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/utils/src/CLogger.cpp.o.d"
   "/home/lw/Workspace/CameraPlugin/utils/src/CThreadPool.cpp" "CMakeFiles/CameraPlugin.dir/utils/src/CThreadPool.cpp.o" "gcc" "CMakeFiles/CameraPlugin.dir/utils/src/CThreadPool.cpp.o.d"

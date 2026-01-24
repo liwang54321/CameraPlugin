@@ -19,6 +19,8 @@
 #include "CFileSourceModule.hpp"
 #include "CElementDescription.hpp"
 
+#include <uvgrtp/lib.hh>
+
 const std::unordered_map<std::string, Option> fileSrcOptionTable = {
     { "type", { "the type of source file", offsetof(FileSourceOption, type), OptionType::INT } },
     { "path", { "the path of source file located", offsetof(FileSourceOption, sPath), OptionType::STRING } },
@@ -26,8 +28,7 @@ const std::unordered_map<std::string, Option> fileSrcOptionTable = {
     { "height", { "the height of the image", offsetof(FileSourceOption, uHeight), OptionType::UINT32 } },
     { "instanceId", { "the instanceId of the decoder", offsetof(FileSourceOption, uInstanceId), OptionType::UINT32 } },
     { "ROIFilePath", { "the ROI parameter File Path", offsetof(FileSourceOption, sROIFilePath), OptionType::STRING } },
-    { "ROIParams",
-      { "the ROI parameters of Image buffer", offsetof(FileSourceOption, sROIParams), OptionType::STRING } }
+    { "ROIParams", { "the ROI parameters of Image buffer", offsetof(FileSourceOption, sROIParams), OptionType::STRING } }
 };
 
 CElementDescription fileSrcDescription{ "FileSrc",
@@ -88,8 +89,12 @@ NvError CFileSourceModule::Init()
         m_rois.emplace_back(std::move(rois));
     }
 
-    m_upFrameHandler =
-        CreateFrameHandler(m_fileSrcOption.type, m_fileSrcOption.sPath, m_fileSrcOption.uWidth, m_fileSrcOption.uHeight,
+    auto config = m_pAppCfg->GetCameraConfig(GetSensorId());
+    m_fileSrcOption.uHeight = config->height;
+    m_fileSrcOption.uWidth = config->width;
+    static uint32_t id = 0;
+    m_fileSrcOption.uInstanceId = id++ % 2;
+    m_upFrameHandler = CreateFrameHandler(m_fileSrcOption.type, "none path", config->rtp_ip, config->port, "198.18.45.9", m_fileSrcOption.uWidth, m_fileSrcOption.uHeight,
                            m_spModuleCfg->m_sensorId, m_fileSrcOption.uInstanceId);
     if (!m_upFrameHandler) {
         PLOG_ERR("Init: CreateFrameHandler CFrameHandler failed.\n");

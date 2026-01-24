@@ -372,10 +372,10 @@ CMakeFiles/CameraPlugin.dir/modules/src/CFrameHandler.cpp.o: \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/future \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/atomic_futex.h \
  /home/lw/Workspace/CameraPlugin/utils/include/CUtils.hpp \
- /home/lw/Workspace/CameraPlugin/utils/include/CTimer.hpp \
- /home/lw/Workspace/CameraPlugin/utils/include/CThreadPool.hpp \
  /home/lw/Workspace/CameraPlugin/config/include/COptionParser.hpp \
  /home/lw/Workspace/CameraPlugin/core/include/CPeerValidator.hpp \
+ /home/lw/Workspace/CameraPlugin/utils/include/CTimer.hpp \
+ /home/lw/Workspace/CameraPlugin/utils/include/CThreadPool.hpp \
  /home/lw/Workspace/CameraPlugin/modules/include/CFrameHandler.hpp \
  /home/lw/Workspace/CameraPlugin/modules/include/CFrameDecoder.hpp \
  /drive/drive-linux/include/nvmedia_6x/nvmedia_parser.h \
@@ -383,4 +383,26 @@ CMakeFiles/CameraPlugin.dir/modules/src/CFrameHandler.cpp.o: \
  /drive/drive-linux/include/nvmedia_6x/nvmedia_core.h \
  /drive/drive-linux/include/nvmedia_6x/nvmedia_common_encode_decode.h \
  /drive/drive-linux/include/nvmedia_6x/nvmedia_drm.h \
- /drive/drive-linux/include/nvmedia_6x/nvmedia_ide.h
+ /drive/drive-linux/include/nvmedia_6x/nvmedia_ide.h \
+ /home/lw/Workspace/CameraPlugin/thirdparty/uvgRTP/include/uvgrtp/lib.hh \
+ /home/lw/Workspace/CameraPlugin/thirdparty/uvgRTP/include/uvgrtp/media_stream.hh \
+ /home/lw/Workspace/CameraPlugin/thirdparty/uvgRTP/include/uvgrtp/util.hh \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/sys/time.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/sys/socket.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/struct_iovec.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/socket.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/socket_type.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/sockaddr.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/asm/socket.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/asm-generic/socket.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/asm/sockios.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/asm-generic/sockios.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/types/struct_osockaddr.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/netinet/in.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/in.h \
+ /home/lw/Workspace/CameraPlugin/thirdparty/uvgRTP/include/uvgrtp/session.hh \
+ /home/lw/Workspace/CameraPlugin/thirdparty/uvgRTP/include/uvgrtp/context.hh \
+ /home/lw/Workspace/CameraPlugin/thirdparty/uvgRTP/include/uvgrtp/rtcp.hh \
+ /home/lw/Workspace/CameraPlugin/thirdparty/uvgRTP/include/uvgrtp/clock.hh \
+ /home/lw/Workspace/CameraPlugin/thirdparty/uvgRTP/include/uvgrtp/frame.hh \
+ /home/lw/Workspace/CameraPlugin/thirdparty/uvgRTP/include/uvgrtp/version.hh

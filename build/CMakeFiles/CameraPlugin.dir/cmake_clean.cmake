@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.o"
-  "CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.o.d"
   "CMakeFiles/CameraPlugin.dir/config/src/CCmdLineParser.cpp.o"
   "CMakeFiles/CameraPlugin.dir/config/src/CCmdLineParser.cpp.o.d"
   "CMakeFiles/CameraPlugin.dir/config/src/CConfig.cpp.o"
@@ -53,6 +51,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/CameraPlugin.dir/core/src/CStatusManager.cpp.o.d"
   "CMakeFiles/CameraPlugin.dir/core/src/CSyncAggregator.cpp.o"
   "CMakeFiles/CameraPlugin.dir/core/src/CSyncAggregator.cpp.o.d"
+  "CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.o"
+  "CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.o.d"
   "CMakeFiles/CameraPlugin.dir/modules/src/CCudaModule.cpp.o"
   "CMakeFiles/CameraPlugin.dir/modules/src/CCudaModule.cpp.o.d"
   "CMakeFiles/CameraPlugin.dir/modules/src/CEncModule.cpp.o"
@@ -79,8 +79,14 @@ file(REMOVE_RECURSE
   "CMakeFiles/CameraPlugin.dir/modules/src/CVirtualSrcModule.cpp.o.d"
   "CMakeFiles/CameraPlugin.dir/modules/src/CWFDDisplayModule.cpp.o"
   "CMakeFiles/CameraPlugin.dir/modules/src/CWFDDisplayModule.cpp.o.d"
+  "CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.o"
+  "CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.o.d"
   "CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o"
   "CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o.d"
+  "CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.o"
+  "CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.o.d"
+  "CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.o"
+  "CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.o.d"
   "CMakeFiles/CameraPlugin.dir/utils/src/CFileSink.cpp.o"
   "CMakeFiles/CameraPlugin.dir/utils/src/CFileSink.cpp.o.d"
   "CMakeFiles/CameraPlugin.dir/utils/src/CLogger.cpp.o"
@@ -91,11 +97,15 @@ file(REMOVE_RECURSE
   "CMakeFiles/CameraPlugin.dir/utils/src/CTimer.cpp.o.d"
   "CMakeFiles/CameraPlugin.dir/utils/src/CUtils.cpp.o"
   "CMakeFiles/CameraPlugin.dir/utils/src/CUtils.cpp.o.d"
+  "CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.o"
+  "CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.o.d"
+  "CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.o"
+  "CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.o.d"
   "libCameraPlugin.pdb"
   "libCameraPlugin.so"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
+foreach(lang CUDA CXX)
   include(CMakeFiles/CameraPlugin.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

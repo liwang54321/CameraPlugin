@@ -129,29 +129,18 @@ CameraPlugin/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/build
 .PHONY : CameraPlugin/fast
 
-CameraPlugin.o: CameraPlugin.cpp.o
-.PHONY : CameraPlugin.o
+#=============================================================================
+# Target rules for targets named CameraPluginExec
 
-# target to build an object file
-CameraPlugin.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.o
-.PHONY : CameraPlugin.cpp.o
+# Build rule for target.
+CameraPluginExec: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CameraPluginExec
+.PHONY : CameraPluginExec
 
-CameraPlugin.i: CameraPlugin.cpp.i
-.PHONY : CameraPlugin.i
-
-# target to preprocess a source file
-CameraPlugin.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.i
-.PHONY : CameraPlugin.cpp.i
-
-CameraPlugin.s: CameraPlugin.cpp.s
-.PHONY : CameraPlugin.s
-
-# target to generate assembly for a file
-CameraPlugin.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.s
-.PHONY : CameraPlugin.cpp.s
+# fast build rule for target.
+CameraPluginExec/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPluginExec.dir/build.make CMakeFiles/CameraPluginExec.dir/build
+.PHONY : CameraPluginExec/fast
 
 config/src/CCmdLineParser.o: config/src/CCmdLineParser.cpp.o
 .PHONY : config/src/CCmdLineParser.o
@@ -777,6 +766,30 @@ core/src/CSyncAggregator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/core/src/CSyncAggregator.cpp.s
 .PHONY : core/src/CSyncAggregator.cpp.s
 
+features/low_power_mode/src/CPvaLowPowerAlgos.o: features/low_power_mode/src/CPvaLowPowerAlgos.cpp.o
+.PHONY : features/low_power_mode/src/CPvaLowPowerAlgos.o
+
+# target to build an object file
+features/low_power_mode/src/CPvaLowPowerAlgos.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.o
+.PHONY : features/low_power_mode/src/CPvaLowPowerAlgos.cpp.o
+
+features/low_power_mode/src/CPvaLowPowerAlgos.i: features/low_power_mode/src/CPvaLowPowerAlgos.cpp.i
+.PHONY : features/low_power_mode/src/CPvaLowPowerAlgos.i
+
+# target to preprocess a source file
+features/low_power_mode/src/CPvaLowPowerAlgos.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.i
+.PHONY : features/low_power_mode/src/CPvaLowPowerAlgos.cpp.i
+
+features/low_power_mode/src/CPvaLowPowerAlgos.s: features/low_power_mode/src/CPvaLowPowerAlgos.cpp.s
+.PHONY : features/low_power_mode/src/CPvaLowPowerAlgos.s
+
+# target to generate assembly for a file
+features/low_power_mode/src/CPvaLowPowerAlgos.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.s
+.PHONY : features/low_power_mode/src/CPvaLowPowerAlgos.cpp.s
+
 modules/src/CCudaModule.o: modules/src/CCudaModule.cpp.o
 .PHONY : modules/src/CCudaModule.o
 
@@ -1089,6 +1102,30 @@ modules/src/CWFDDisplayModule.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/modules/src/CWFDDisplayModule.cpp.s
 .PHONY : modules/src/CWFDDisplayModule.cpp.s
 
+plugin/src/CameraPlugin.o: plugin/src/CameraPlugin.cpp.o
+.PHONY : plugin/src/CameraPlugin.o
+
+# target to build an object file
+plugin/src/CameraPlugin.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.o
+.PHONY : plugin/src/CameraPlugin.cpp.o
+
+plugin/src/CameraPlugin.i: plugin/src/CameraPlugin.cpp.i
+.PHONY : plugin/src/CameraPlugin.i
+
+# target to preprocess a source file
+plugin/src/CameraPlugin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.i
+.PHONY : plugin/src/CameraPlugin.cpp.i
+
+plugin/src/CameraPlugin.s: plugin/src/CameraPlugin.cpp.s
+.PHONY : plugin/src/CameraPlugin.s
+
+# target to generate assembly for a file
+plugin/src/CameraPlugin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.s
+.PHONY : plugin/src/CameraPlugin.cpp.s
+
 plugin/src/ConfigParser.o: plugin/src/ConfigParser.cpp.o
 .PHONY : plugin/src/ConfigParser.o
 
@@ -1112,6 +1149,78 @@ plugin/src/ConfigParser.s: plugin/src/ConfigParser.cpp.s
 plugin/src/ConfigParser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.s
 .PHONY : plugin/src/ConfigParser.cpp.s
+
+samples/main.o: samples/main.cc.o
+.PHONY : samples/main.o
+
+# target to build an object file
+samples/main.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPluginExec.dir/build.make CMakeFiles/CameraPluginExec.dir/samples/main.cc.o
+.PHONY : samples/main.cc.o
+
+samples/main.i: samples/main.cc.i
+.PHONY : samples/main.i
+
+# target to preprocess a source file
+samples/main.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPluginExec.dir/build.make CMakeFiles/CameraPluginExec.dir/samples/main.cc.i
+.PHONY : samples/main.cc.i
+
+samples/main.s: samples/main.cc.s
+.PHONY : samples/main.s
+
+# target to generate assembly for a file
+samples/main.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPluginExec.dir/build.make CMakeFiles/CameraPluginExec.dir/samples/main.cc.s
+.PHONY : samples/main.cc.s
+
+services/status_manager/src/CStatusManagerClient.o: services/status_manager/src/CStatusManagerClient.cpp.o
+.PHONY : services/status_manager/src/CStatusManagerClient.o
+
+# target to build an object file
+services/status_manager/src/CStatusManagerClient.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.o
+.PHONY : services/status_manager/src/CStatusManagerClient.cpp.o
+
+services/status_manager/src/CStatusManagerClient.i: services/status_manager/src/CStatusManagerClient.cpp.i
+.PHONY : services/status_manager/src/CStatusManagerClient.i
+
+# target to preprocess a source file
+services/status_manager/src/CStatusManagerClient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.i
+.PHONY : services/status_manager/src/CStatusManagerClient.cpp.i
+
+services/status_manager/src/CStatusManagerClient.s: services/status_manager/src/CStatusManagerClient.cpp.s
+.PHONY : services/status_manager/src/CStatusManagerClient.s
+
+# target to generate assembly for a file
+services/status_manager/src/CStatusManagerClient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.s
+.PHONY : services/status_manager/src/CStatusManagerClient.cpp.s
+
+services/status_manager/src/CStatusManagerCommon.o: services/status_manager/src/CStatusManagerCommon.cpp.o
+.PHONY : services/status_manager/src/CStatusManagerCommon.o
+
+# target to build an object file
+services/status_manager/src/CStatusManagerCommon.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.o
+.PHONY : services/status_manager/src/CStatusManagerCommon.cpp.o
+
+services/status_manager/src/CStatusManagerCommon.i: services/status_manager/src/CStatusManagerCommon.cpp.i
+.PHONY : services/status_manager/src/CStatusManagerCommon.i
+
+# target to preprocess a source file
+services/status_manager/src/CStatusManagerCommon.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.i
+.PHONY : services/status_manager/src/CStatusManagerCommon.cpp.i
+
+services/status_manager/src/CStatusManagerCommon.s: services/status_manager/src/CStatusManagerCommon.cpp.s
+.PHONY : services/status_manager/src/CStatusManagerCommon.s
+
+# target to generate assembly for a file
+services/status_manager/src/CStatusManagerCommon.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.s
+.PHONY : services/status_manager/src/CStatusManagerCommon.cpp.s
 
 utils/src/CFileSink.o: utils/src/CFileSink.cpp.o
 .PHONY : utils/src/CFileSink.o
@@ -1233,6 +1342,54 @@ utils/src/CUtils.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/utils/src/CUtils.cpp.s
 .PHONY : utils/src/CUtils.cpp.s
 
+utils/src/cudaYUV-NV12.o: utils/src/cudaYUV-NV12.cu.o
+.PHONY : utils/src/cudaYUV-NV12.o
+
+# target to build an object file
+utils/src/cudaYUV-NV12.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.o
+.PHONY : utils/src/cudaYUV-NV12.cu.o
+
+utils/src/cudaYUV-NV12.i: utils/src/cudaYUV-NV12.cu.i
+.PHONY : utils/src/cudaYUV-NV12.i
+
+# target to preprocess a source file
+utils/src/cudaYUV-NV12.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.i
+.PHONY : utils/src/cudaYUV-NV12.cu.i
+
+utils/src/cudaYUV-NV12.s: utils/src/cudaYUV-NV12.cu.s
+.PHONY : utils/src/cudaYUV-NV12.s
+
+# target to generate assembly for a file
+utils/src/cudaYUV-NV12.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.s
+.PHONY : utils/src/cudaYUV-NV12.cu.s
+
+utils/src/cvt2d_kernels.o: utils/src/cvt2d_kernels.cu.o
+.PHONY : utils/src/cvt2d_kernels.o
+
+# target to build an object file
+utils/src/cvt2d_kernels.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.o
+.PHONY : utils/src/cvt2d_kernels.cu.o
+
+utils/src/cvt2d_kernels.i: utils/src/cvt2d_kernels.cu.i
+.PHONY : utils/src/cvt2d_kernels.i
+
+# target to preprocess a source file
+utils/src/cvt2d_kernels.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.i
+.PHONY : utils/src/cvt2d_kernels.cu.i
+
+utils/src/cvt2d_kernels.s: utils/src/cvt2d_kernels.cu.s
+.PHONY : utils/src/cvt2d_kernels.s
+
+# target to generate assembly for a file
+utils/src/cvt2d_kernels.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CameraPlugin.dir/build.make CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.s
+.PHONY : utils/src/cvt2d_kernels.cu.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1242,9 +1399,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CameraPlugin"
-	@echo "... CameraPlugin.o"
-	@echo "... CameraPlugin.i"
-	@echo "... CameraPlugin.s"
+	@echo "... CameraPluginExec"
 	@echo "... config/src/CCmdLineParser.o"
 	@echo "... config/src/CCmdLineParser.i"
 	@echo "... config/src/CCmdLineParser.s"
@@ -1323,6 +1478,9 @@ help:
 	@echo "... core/src/CSyncAggregator.o"
 	@echo "... core/src/CSyncAggregator.i"
 	@echo "... core/src/CSyncAggregator.s"
+	@echo "... features/low_power_mode/src/CPvaLowPowerAlgos.o"
+	@echo "... features/low_power_mode/src/CPvaLowPowerAlgos.i"
+	@echo "... features/low_power_mode/src/CPvaLowPowerAlgos.s"
 	@echo "... modules/src/CCudaModule.o"
 	@echo "... modules/src/CCudaModule.i"
 	@echo "... modules/src/CCudaModule.s"
@@ -1362,9 +1520,21 @@ help:
 	@echo "... modules/src/CWFDDisplayModule.o"
 	@echo "... modules/src/CWFDDisplayModule.i"
 	@echo "... modules/src/CWFDDisplayModule.s"
+	@echo "... plugin/src/CameraPlugin.o"
+	@echo "... plugin/src/CameraPlugin.i"
+	@echo "... plugin/src/CameraPlugin.s"
 	@echo "... plugin/src/ConfigParser.o"
 	@echo "... plugin/src/ConfigParser.i"
 	@echo "... plugin/src/ConfigParser.s"
+	@echo "... samples/main.o"
+	@echo "... samples/main.i"
+	@echo "... samples/main.s"
+	@echo "... services/status_manager/src/CStatusManagerClient.o"
+	@echo "... services/status_manager/src/CStatusManagerClient.i"
+	@echo "... services/status_manager/src/CStatusManagerClient.s"
+	@echo "... services/status_manager/src/CStatusManagerCommon.o"
+	@echo "... services/status_manager/src/CStatusManagerCommon.i"
+	@echo "... services/status_manager/src/CStatusManagerCommon.s"
 	@echo "... utils/src/CFileSink.o"
 	@echo "... utils/src/CFileSink.i"
 	@echo "... utils/src/CFileSink.s"
@@ -1380,6 +1550,12 @@ help:
 	@echo "... utils/src/CUtils.o"
 	@echo "... utils/src/CUtils.i"
 	@echo "... utils/src/CUtils.s"
+	@echo "... utils/src/cudaYUV-NV12.o"
+	@echo "... utils/src/cudaYUV-NV12.i"
+	@echo "... utils/src/cudaYUV-NV12.s"
+	@echo "... utils/src/cvt2d_kernels.o"
+	@echo "... utils/src/cvt2d_kernels.i"
+	@echo "... utils/src/cvt2d_kernels.s"
 .PHONY : help
 
 

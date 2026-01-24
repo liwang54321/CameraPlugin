@@ -72,24 +72,38 @@ include CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/codegen:
 .PHONY : CMakeFiles/CameraPlugin.dir/codegen
 
-CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
-CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.o: /home/lw/Workspace/CameraPlugin/CameraPlugin.cpp
-CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.o"
-	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.o -MF CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.o.d -o CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.o -c /home/lw/Workspace/CameraPlugin/CameraPlugin.cpp
+CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
+CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.o: /home/lw/Workspace/CameraPlugin/plugin/src/CameraPlugin.cpp
+CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.o"
+	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.o -MF CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.o.d -o CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.o -c /home/lw/Workspace/CameraPlugin/plugin/src/CameraPlugin.cpp
 
-CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.i"
-	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lw/Workspace/CameraPlugin/CameraPlugin.cpp > CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.i
+CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.i"
+	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lw/Workspace/CameraPlugin/plugin/src/CameraPlugin.cpp > CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.i
 
-CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.s"
-	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lw/Workspace/CameraPlugin/CameraPlugin.cpp -o CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.s
+CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.s"
+	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lw/Workspace/CameraPlugin/plugin/src/CameraPlugin.cpp -o CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.s
+
+CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
+CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o: /home/lw/Workspace/CameraPlugin/plugin/src/ConfigParser.cpp
+CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o"
+	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o -MF CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o.d -o CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o -c /home/lw/Workspace/CameraPlugin/plugin/src/ConfigParser.cpp
+
+CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.i"
+	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lw/Workspace/CameraPlugin/plugin/src/ConfigParser.cpp > CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.i
+
+CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.s"
+	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lw/Workspace/CameraPlugin/plugin/src/ConfigParser.cpp -o CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.s
 
 CMakeFiles/CameraPlugin.dir/utils/src/CThreadPool.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/utils/src/CThreadPool.cpp.o: /home/lw/Workspace/CameraPlugin/utils/src/CThreadPool.cpp
 CMakeFiles/CameraPlugin.dir/utils/src/CThreadPool.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CameraPlugin.dir/utils/src/CThreadPool.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CameraPlugin.dir/utils/src/CThreadPool.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/utils/src/CThreadPool.cpp.o -MF CMakeFiles/CameraPlugin.dir/utils/src/CThreadPool.cpp.o.d -o CMakeFiles/CameraPlugin.dir/utils/src/CThreadPool.cpp.o -c /home/lw/Workspace/CameraPlugin/utils/src/CThreadPool.cpp
 
 CMakeFiles/CameraPlugin.dir/utils/src/CThreadPool.cpp.i: cmake_force
@@ -103,7 +117,7 @@ CMakeFiles/CameraPlugin.dir/utils/src/CThreadPool.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/utils/src/CUtils.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/utils/src/CUtils.cpp.o: /home/lw/Workspace/CameraPlugin/utils/src/CUtils.cpp
 CMakeFiles/CameraPlugin.dir/utils/src/CUtils.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CameraPlugin.dir/utils/src/CUtils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CameraPlugin.dir/utils/src/CUtils.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/utils/src/CUtils.cpp.o -MF CMakeFiles/CameraPlugin.dir/utils/src/CUtils.cpp.o.d -o CMakeFiles/CameraPlugin.dir/utils/src/CUtils.cpp.o -c /home/lw/Workspace/CameraPlugin/utils/src/CUtils.cpp
 
 CMakeFiles/CameraPlugin.dir/utils/src/CUtils.cpp.i: cmake_force
@@ -117,7 +131,7 @@ CMakeFiles/CameraPlugin.dir/utils/src/CUtils.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/utils/src/CTimer.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/utils/src/CTimer.cpp.o: /home/lw/Workspace/CameraPlugin/utils/src/CTimer.cpp
 CMakeFiles/CameraPlugin.dir/utils/src/CTimer.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CameraPlugin.dir/utils/src/CTimer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CameraPlugin.dir/utils/src/CTimer.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/utils/src/CTimer.cpp.o -MF CMakeFiles/CameraPlugin.dir/utils/src/CTimer.cpp.o.d -o CMakeFiles/CameraPlugin.dir/utils/src/CTimer.cpp.o -c /home/lw/Workspace/CameraPlugin/utils/src/CTimer.cpp
 
 CMakeFiles/CameraPlugin.dir/utils/src/CTimer.cpp.i: cmake_force
@@ -131,7 +145,7 @@ CMakeFiles/CameraPlugin.dir/utils/src/CTimer.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/utils/src/CFileSink.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/utils/src/CFileSink.cpp.o: /home/lw/Workspace/CameraPlugin/utils/src/CFileSink.cpp
 CMakeFiles/CameraPlugin.dir/utils/src/CFileSink.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CameraPlugin.dir/utils/src/CFileSink.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CameraPlugin.dir/utils/src/CFileSink.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/utils/src/CFileSink.cpp.o -MF CMakeFiles/CameraPlugin.dir/utils/src/CFileSink.cpp.o.d -o CMakeFiles/CameraPlugin.dir/utils/src/CFileSink.cpp.o -c /home/lw/Workspace/CameraPlugin/utils/src/CFileSink.cpp
 
 CMakeFiles/CameraPlugin.dir/utils/src/CFileSink.cpp.i: cmake_force
@@ -145,7 +159,7 @@ CMakeFiles/CameraPlugin.dir/utils/src/CFileSink.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/utils/src/CLogger.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/utils/src/CLogger.cpp.o: /home/lw/Workspace/CameraPlugin/utils/src/CLogger.cpp
 CMakeFiles/CameraPlugin.dir/utils/src/CLogger.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CameraPlugin.dir/utils/src/CLogger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CameraPlugin.dir/utils/src/CLogger.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/utils/src/CLogger.cpp.o -MF CMakeFiles/CameraPlugin.dir/utils/src/CLogger.cpp.o.d -o CMakeFiles/CameraPlugin.dir/utils/src/CLogger.cpp.o -c /home/lw/Workspace/CameraPlugin/utils/src/CLogger.cpp
 
 CMakeFiles/CameraPlugin.dir/utils/src/CLogger.cpp.i: cmake_force
@@ -155,20 +169,6 @@ CMakeFiles/CameraPlugin.dir/utils/src/CLogger.cpp.i: cmake_force
 CMakeFiles/CameraPlugin.dir/utils/src/CLogger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CameraPlugin.dir/utils/src/CLogger.cpp.s"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lw/Workspace/CameraPlugin/utils/src/CLogger.cpp -o CMakeFiles/CameraPlugin.dir/utils/src/CLogger.cpp.s
-
-CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
-CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o: /home/lw/Workspace/CameraPlugin/plugin/src/ConfigParser.cpp
-CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o"
-	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o -MF CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o.d -o CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o -c /home/lw/Workspace/CameraPlugin/plugin/src/ConfigParser.cpp
-
-CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.i"
-	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lw/Workspace/CameraPlugin/plugin/src/ConfigParser.cpp > CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.i
-
-CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.s"
-	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lw/Workspace/CameraPlugin/plugin/src/ConfigParser.cpp -o CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.s
 
 CMakeFiles/CameraPlugin.dir/core/src/CPassthroughConsumer.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/core/src/CPassthroughConsumer.cpp.o: /home/lw/Workspace/CameraPlugin/core/src/CPassthroughConsumer.cpp
@@ -310,10 +310,38 @@ CMakeFiles/CameraPlugin.dir/core/src/CStatusManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CameraPlugin.dir/core/src/CStatusManager.cpp.s"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lw/Workspace/CameraPlugin/core/src/CStatusManager.cpp -o CMakeFiles/CameraPlugin.dir/core/src/CStatusManager.cpp.s
 
+CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
+CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.o: /home/lw/Workspace/CameraPlugin/services/status_manager/src/CStatusManagerClient.cpp
+CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.o"
+	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.o -MF CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.o.d -o CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.o -c /home/lw/Workspace/CameraPlugin/services/status_manager/src/CStatusManagerClient.cpp
+
+CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.i"
+	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lw/Workspace/CameraPlugin/services/status_manager/src/CStatusManagerClient.cpp > CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.i
+
+CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.s"
+	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lw/Workspace/CameraPlugin/services/status_manager/src/CStatusManagerClient.cpp -o CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.s
+
+CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
+CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.o: /home/lw/Workspace/CameraPlugin/services/status_manager/src/CStatusManagerCommon.cpp
+CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.o"
+	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.o -MF CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.o.d -o CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.o -c /home/lw/Workspace/CameraPlugin/services/status_manager/src/CStatusManagerCommon.cpp
+
+CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.i"
+	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lw/Workspace/CameraPlugin/services/status_manager/src/CStatusManagerCommon.cpp > CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.i
+
+CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.s"
+	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lw/Workspace/CameraPlugin/services/status_manager/src/CStatusManagerCommon.cpp -o CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.s
+
 CMakeFiles/CameraPlugin.dir/core/src/CPeerValidator.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/core/src/CPeerValidator.cpp.o: /home/lw/Workspace/CameraPlugin/core/src/CPeerValidator.cpp
 CMakeFiles/CameraPlugin.dir/core/src/CPeerValidator.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/CameraPlugin.dir/core/src/CPeerValidator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/CameraPlugin.dir/core/src/CPeerValidator.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/core/src/CPeerValidator.cpp.o -MF CMakeFiles/CameraPlugin.dir/core/src/CPeerValidator.cpp.o.d -o CMakeFiles/CameraPlugin.dir/core/src/CPeerValidator.cpp.o -c /home/lw/Workspace/CameraPlugin/core/src/CPeerValidator.cpp
 
 CMakeFiles/CameraPlugin.dir/core/src/CPeerValidator.cpp.i: cmake_force
@@ -327,7 +355,7 @@ CMakeFiles/CameraPlugin.dir/core/src/CPeerValidator.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/core/src/CPoolManager.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/core/src/CPoolManager.cpp.o: /home/lw/Workspace/CameraPlugin/core/src/CPoolManager.cpp
 CMakeFiles/CameraPlugin.dir/core/src/CPoolManager.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/CameraPlugin.dir/core/src/CPoolManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/CameraPlugin.dir/core/src/CPoolManager.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/core/src/CPoolManager.cpp.o -MF CMakeFiles/CameraPlugin.dir/core/src/CPoolManager.cpp.o.d -o CMakeFiles/CameraPlugin.dir/core/src/CPoolManager.cpp.o -c /home/lw/Workspace/CameraPlugin/core/src/CPoolManager.cpp
 
 CMakeFiles/CameraPlugin.dir/core/src/CPoolManager.cpp.i: cmake_force
@@ -341,7 +369,7 @@ CMakeFiles/CameraPlugin.dir/core/src/CPoolManager.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/core/src/CBufAggregator.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/core/src/CBufAggregator.cpp.o: /home/lw/Workspace/CameraPlugin/core/src/CBufAggregator.cpp
 CMakeFiles/CameraPlugin.dir/core/src/CBufAggregator.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/CameraPlugin.dir/core/src/CBufAggregator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/CameraPlugin.dir/core/src/CBufAggregator.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/core/src/CBufAggregator.cpp.o -MF CMakeFiles/CameraPlugin.dir/core/src/CBufAggregator.cpp.o.d -o CMakeFiles/CameraPlugin.dir/core/src/CBufAggregator.cpp.o -c /home/lw/Workspace/CameraPlugin/core/src/CBufAggregator.cpp
 
 CMakeFiles/CameraPlugin.dir/core/src/CBufAggregator.cpp.i: cmake_force
@@ -355,7 +383,7 @@ CMakeFiles/CameraPlugin.dir/core/src/CBufAggregator.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/core/src/CSyncAggregator.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/core/src/CSyncAggregator.cpp.o: /home/lw/Workspace/CameraPlugin/core/src/CSyncAggregator.cpp
 CMakeFiles/CameraPlugin.dir/core/src/CSyncAggregator.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/CameraPlugin.dir/core/src/CSyncAggregator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/CameraPlugin.dir/core/src/CSyncAggregator.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/core/src/CSyncAggregator.cpp.o -MF CMakeFiles/CameraPlugin.dir/core/src/CSyncAggregator.cpp.o.d -o CMakeFiles/CameraPlugin.dir/core/src/CSyncAggregator.cpp.o -c /home/lw/Workspace/CameraPlugin/core/src/CSyncAggregator.cpp
 
 CMakeFiles/CameraPlugin.dir/core/src/CSyncAggregator.cpp.i: cmake_force
@@ -369,7 +397,7 @@ CMakeFiles/CameraPlugin.dir/core/src/CSyncAggregator.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/core/src/CBaseModule.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/core/src/CBaseModule.cpp.o: /home/lw/Workspace/CameraPlugin/core/src/CBaseModule.cpp
 CMakeFiles/CameraPlugin.dir/core/src/CBaseModule.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/CameraPlugin.dir/core/src/CBaseModule.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/CameraPlugin.dir/core/src/CBaseModule.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/core/src/CBaseModule.cpp.o -MF CMakeFiles/CameraPlugin.dir/core/src/CBaseModule.cpp.o.d -o CMakeFiles/CameraPlugin.dir/core/src/CBaseModule.cpp.o -c /home/lw/Workspace/CameraPlugin/core/src/CBaseModule.cpp
 
 CMakeFiles/CameraPlugin.dir/core/src/CBaseModule.cpp.i: cmake_force
@@ -383,7 +411,7 @@ CMakeFiles/CameraPlugin.dir/core/src/CBaseModule.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/core/src/CManager.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/core/src/CManager.cpp.o: /home/lw/Workspace/CameraPlugin/core/src/CManager.cpp
 CMakeFiles/CameraPlugin.dir/core/src/CManager.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/CameraPlugin.dir/core/src/CManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/CameraPlugin.dir/core/src/CManager.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/core/src/CManager.cpp.o -MF CMakeFiles/CameraPlugin.dir/core/src/CManager.cpp.o.d -o CMakeFiles/CameraPlugin.dir/core/src/CManager.cpp.o -c /home/lw/Workspace/CameraPlugin/core/src/CManager.cpp
 
 CMakeFiles/CameraPlugin.dir/core/src/CManager.cpp.i: cmake_force
@@ -397,7 +425,7 @@ CMakeFiles/CameraPlugin.dir/core/src/CManager.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/core/src/CProfiler.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/core/src/CProfiler.cpp.o: /home/lw/Workspace/CameraPlugin/core/src/CProfiler.cpp
 CMakeFiles/CameraPlugin.dir/core/src/CProfiler.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/CameraPlugin.dir/core/src/CProfiler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/CameraPlugin.dir/core/src/CProfiler.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/core/src/CProfiler.cpp.o -MF CMakeFiles/CameraPlugin.dir/core/src/CProfiler.cpp.o.d -o CMakeFiles/CameraPlugin.dir/core/src/CProfiler.cpp.o -c /home/lw/Workspace/CameraPlugin/core/src/CProfiler.cpp
 
 CMakeFiles/CameraPlugin.dir/core/src/CProfiler.cpp.i: cmake_force
@@ -411,7 +439,7 @@ CMakeFiles/CameraPlugin.dir/core/src/CProfiler.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgReader.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgReader.cpp.o: /home/lw/Workspace/CameraPlugin/control_channel/src/CMsgReader.cpp
 CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgReader.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgReader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgReader.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgReader.cpp.o -MF CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgReader.cpp.o.d -o CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgReader.cpp.o -c /home/lw/Workspace/CameraPlugin/control_channel/src/CMsgReader.cpp
 
 CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgReader.cpp.i: cmake_force
@@ -425,7 +453,7 @@ CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgReader.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkQnx.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkQnx.cpp.o: /home/lw/Workspace/CameraPlugin/control_channel/src/CIpcLinkQnx.cpp
 CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkQnx.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkQnx.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkQnx.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkQnx.cpp.o -MF CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkQnx.cpp.o.d -o CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkQnx.cpp.o -c /home/lw/Workspace/CameraPlugin/control_channel/src/CIpcLinkQnx.cpp
 
 CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkQnx.cpp.i: cmake_force
@@ -439,7 +467,7 @@ CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkQnx.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgWriter.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgWriter.cpp.o: /home/lw/Workspace/CameraPlugin/control_channel/src/CMsgWriter.cpp
 CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgWriter.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgWriter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgWriter.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgWriter.cpp.o -MF CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgWriter.cpp.o.d -o CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgWriter.cpp.o -c /home/lw/Workspace/CameraPlugin/control_channel/src/CMsgWriter.cpp
 
 CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgWriter.cpp.i: cmake_force
@@ -453,7 +481,7 @@ CMakeFiles/CameraPlugin.dir/control_channel/src/CMsgWriter.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/control_channel/src/CControlChannelManager.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/control_channel/src/CControlChannelManager.cpp.o: /home/lw/Workspace/CameraPlugin/control_channel/src/CControlChannelManager.cpp
 CMakeFiles/CameraPlugin.dir/control_channel/src/CControlChannelManager.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/CameraPlugin.dir/control_channel/src/CControlChannelManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/CameraPlugin.dir/control_channel/src/CControlChannelManager.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/control_channel/src/CControlChannelManager.cpp.o -MF CMakeFiles/CameraPlugin.dir/control_channel/src/CControlChannelManager.cpp.o.d -o CMakeFiles/CameraPlugin.dir/control_channel/src/CControlChannelManager.cpp.o -c /home/lw/Workspace/CameraPlugin/control_channel/src/CControlChannelManager.cpp
 
 CMakeFiles/CameraPlugin.dir/control_channel/src/CControlChannelManager.cpp.i: cmake_force
@@ -467,7 +495,7 @@ CMakeFiles/CameraPlugin.dir/control_channel/src/CControlChannelManager.cpp.s: cm
 CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkLinux.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkLinux.cpp.o: /home/lw/Workspace/CameraPlugin/control_channel/src/CIpcLinkLinux.cpp
 CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkLinux.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkLinux.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkLinux.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkLinux.cpp.o -MF CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkLinux.cpp.o.d -o CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkLinux.cpp.o -c /home/lw/Workspace/CameraPlugin/control_channel/src/CIpcLinkLinux.cpp
 
 CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkLinux.cpp.i: cmake_force
@@ -481,7 +509,7 @@ CMakeFiles/CameraPlugin.dir/control_channel/src/CIpcLinkLinux.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/modules/src/CVirtualDstModule.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/modules/src/CVirtualDstModule.cpp.o: /home/lw/Workspace/CameraPlugin/modules/src/CVirtualDstModule.cpp
 CMakeFiles/CameraPlugin.dir/modules/src/CVirtualDstModule.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CVirtualDstModule.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CVirtualDstModule.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/modules/src/CVirtualDstModule.cpp.o -MF CMakeFiles/CameraPlugin.dir/modules/src/CVirtualDstModule.cpp.o.d -o CMakeFiles/CameraPlugin.dir/modules/src/CVirtualDstModule.cpp.o -c /home/lw/Workspace/CameraPlugin/modules/src/CVirtualDstModule.cpp
 
 CMakeFiles/CameraPlugin.dir/modules/src/CVirtualDstModule.cpp.i: cmake_force
@@ -495,7 +523,7 @@ CMakeFiles/CameraPlugin.dir/modules/src/CVirtualDstModule.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/modules/src/CVirtualSrcModule.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/modules/src/CVirtualSrcModule.cpp.o: /home/lw/Workspace/CameraPlugin/modules/src/CVirtualSrcModule.cpp
 CMakeFiles/CameraPlugin.dir/modules/src/CVirtualSrcModule.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CVirtualSrcModule.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CVirtualSrcModule.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/modules/src/CVirtualSrcModule.cpp.o -MF CMakeFiles/CameraPlugin.dir/modules/src/CVirtualSrcModule.cpp.o.d -o CMakeFiles/CameraPlugin.dir/modules/src/CVirtualSrcModule.cpp.o -c /home/lw/Workspace/CameraPlugin/modules/src/CVirtualSrcModule.cpp
 
 CMakeFiles/CameraPlugin.dir/modules/src/CVirtualSrcModule.cpp.i: cmake_force
@@ -509,7 +537,7 @@ CMakeFiles/CameraPlugin.dir/modules/src/CVirtualSrcModule.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/modules/src/CWFDDisplayModule.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/modules/src/CWFDDisplayModule.cpp.o: /home/lw/Workspace/CameraPlugin/modules/src/CWFDDisplayModule.cpp
 CMakeFiles/CameraPlugin.dir/modules/src/CWFDDisplayModule.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CWFDDisplayModule.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CWFDDisplayModule.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/modules/src/CWFDDisplayModule.cpp.o -MF CMakeFiles/CameraPlugin.dir/modules/src/CWFDDisplayModule.cpp.o.d -o CMakeFiles/CameraPlugin.dir/modules/src/CWFDDisplayModule.cpp.o -c /home/lw/Workspace/CameraPlugin/modules/src/CWFDDisplayModule.cpp
 
 CMakeFiles/CameraPlugin.dir/modules/src/CWFDDisplayModule.cpp.i: cmake_force
@@ -523,7 +551,7 @@ CMakeFiles/CameraPlugin.dir/modules/src/CWFDDisplayModule.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/modules/src/CFrameDecoder.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/modules/src/CFrameDecoder.cpp.o: /home/lw/Workspace/CameraPlugin/modules/src/CFrameDecoder.cpp
 CMakeFiles/CameraPlugin.dir/modules/src/CFrameDecoder.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CFrameDecoder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CFrameDecoder.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/modules/src/CFrameDecoder.cpp.o -MF CMakeFiles/CameraPlugin.dir/modules/src/CFrameDecoder.cpp.o.d -o CMakeFiles/CameraPlugin.dir/modules/src/CFrameDecoder.cpp.o -c /home/lw/Workspace/CameraPlugin/modules/src/CFrameDecoder.cpp
 
 CMakeFiles/CameraPlugin.dir/modules/src/CFrameDecoder.cpp.i: cmake_force
@@ -537,7 +565,7 @@ CMakeFiles/CameraPlugin.dir/modules/src/CFrameDecoder.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/modules/src/CNvm2dModule.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/modules/src/CNvm2dModule.cpp.o: /home/lw/Workspace/CameraPlugin/modules/src/CNvm2dModule.cpp
 CMakeFiles/CameraPlugin.dir/modules/src/CNvm2dModule.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CNvm2dModule.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CNvm2dModule.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/modules/src/CNvm2dModule.cpp.o -MF CMakeFiles/CameraPlugin.dir/modules/src/CNvm2dModule.cpp.o.d -o CMakeFiles/CameraPlugin.dir/modules/src/CNvm2dModule.cpp.o -c /home/lw/Workspace/CameraPlugin/modules/src/CNvm2dModule.cpp
 
 CMakeFiles/CameraPlugin.dir/modules/src/CNvm2dModule.cpp.i: cmake_force
@@ -551,7 +579,7 @@ CMakeFiles/CameraPlugin.dir/modules/src/CNvm2dModule.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/modules/src/CSiplModule.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/modules/src/CSiplModule.cpp.o: /home/lw/Workspace/CameraPlugin/modules/src/CSiplModule.cpp
 CMakeFiles/CameraPlugin.dir/modules/src/CSiplModule.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CSiplModule.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CSiplModule.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/modules/src/CSiplModule.cpp.o -MF CMakeFiles/CameraPlugin.dir/modules/src/CSiplModule.cpp.o.d -o CMakeFiles/CameraPlugin.dir/modules/src/CSiplModule.cpp.o -c /home/lw/Workspace/CameraPlugin/modules/src/CSiplModule.cpp
 
 CMakeFiles/CameraPlugin.dir/modules/src/CSiplModule.cpp.i: cmake_force
@@ -565,7 +593,7 @@ CMakeFiles/CameraPlugin.dir/modules/src/CSiplModule.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/modules/src/CFrameHandler.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/modules/src/CFrameHandler.cpp.o: /home/lw/Workspace/CameraPlugin/modules/src/CFrameHandler.cpp
 CMakeFiles/CameraPlugin.dir/modules/src/CFrameHandler.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CFrameHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CFrameHandler.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/modules/src/CFrameHandler.cpp.o -MF CMakeFiles/CameraPlugin.dir/modules/src/CFrameHandler.cpp.o.d -o CMakeFiles/CameraPlugin.dir/modules/src/CFrameHandler.cpp.o -c /home/lw/Workspace/CameraPlugin/modules/src/CFrameHandler.cpp
 
 CMakeFiles/CameraPlugin.dir/modules/src/CFrameHandler.cpp.i: cmake_force
@@ -579,7 +607,7 @@ CMakeFiles/CameraPlugin.dir/modules/src/CFrameHandler.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/modules/src/CSiplCamera.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/modules/src/CSiplCamera.cpp.o: /home/lw/Workspace/CameraPlugin/modules/src/CSiplCamera.cpp
 CMakeFiles/CameraPlugin.dir/modules/src/CSiplCamera.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CSiplCamera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CSiplCamera.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/modules/src/CSiplCamera.cpp.o -MF CMakeFiles/CameraPlugin.dir/modules/src/CSiplCamera.cpp.o.d -o CMakeFiles/CameraPlugin.dir/modules/src/CSiplCamera.cpp.o -c /home/lw/Workspace/CameraPlugin/modules/src/CSiplCamera.cpp
 
 CMakeFiles/CameraPlugin.dir/modules/src/CSiplCamera.cpp.i: cmake_force
@@ -593,7 +621,7 @@ CMakeFiles/CameraPlugin.dir/modules/src/CSiplCamera.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/modules/src/CEncModule.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/modules/src/CEncModule.cpp.o: /home/lw/Workspace/CameraPlugin/modules/src/CEncModule.cpp
 CMakeFiles/CameraPlugin.dir/modules/src/CEncModule.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CEncModule.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CEncModule.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/modules/src/CEncModule.cpp.o -MF CMakeFiles/CameraPlugin.dir/modules/src/CEncModule.cpp.o.d -o CMakeFiles/CameraPlugin.dir/modules/src/CEncModule.cpp.o -c /home/lw/Workspace/CameraPlugin/modules/src/CEncModule.cpp
 
 CMakeFiles/CameraPlugin.dir/modules/src/CEncModule.cpp.i: cmake_force
@@ -607,7 +635,7 @@ CMakeFiles/CameraPlugin.dir/modules/src/CEncModule.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/modules/src/CPvaModule.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/modules/src/CPvaModule.cpp.o: /home/lw/Workspace/CameraPlugin/modules/src/CPvaModule.cpp
 CMakeFiles/CameraPlugin.dir/modules/src/CPvaModule.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CPvaModule.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CPvaModule.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/modules/src/CPvaModule.cpp.o -MF CMakeFiles/CameraPlugin.dir/modules/src/CPvaModule.cpp.o.d -o CMakeFiles/CameraPlugin.dir/modules/src/CPvaModule.cpp.o -c /home/lw/Workspace/CameraPlugin/modules/src/CPvaModule.cpp
 
 CMakeFiles/CameraPlugin.dir/modules/src/CPvaModule.cpp.i: cmake_force
@@ -621,7 +649,7 @@ CMakeFiles/CameraPlugin.dir/modules/src/CPvaModule.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/modules/src/CFileSourceModule.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/modules/src/CFileSourceModule.cpp.o: /home/lw/Workspace/CameraPlugin/modules/src/CFileSourceModule.cpp
 CMakeFiles/CameraPlugin.dir/modules/src/CFileSourceModule.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CFileSourceModule.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CFileSourceModule.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/modules/src/CFileSourceModule.cpp.o -MF CMakeFiles/CameraPlugin.dir/modules/src/CFileSourceModule.cpp.o.d -o CMakeFiles/CameraPlugin.dir/modules/src/CFileSourceModule.cpp.o -c /home/lw/Workspace/CameraPlugin/modules/src/CFileSourceModule.cpp
 
 CMakeFiles/CameraPlugin.dir/modules/src/CFileSourceModule.cpp.i: cmake_force
@@ -635,7 +663,7 @@ CMakeFiles/CameraPlugin.dir/modules/src/CFileSourceModule.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/modules/src/CCudaModule.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/modules/src/CCudaModule.cpp.o: /home/lw/Workspace/CameraPlugin/modules/src/CCudaModule.cpp
 CMakeFiles/CameraPlugin.dir/modules/src/CCudaModule.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CCudaModule.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CCudaModule.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/modules/src/CCudaModule.cpp.o -MF CMakeFiles/CameraPlugin.dir/modules/src/CCudaModule.cpp.o.d -o CMakeFiles/CameraPlugin.dir/modules/src/CCudaModule.cpp.o -c /home/lw/Workspace/CameraPlugin/modules/src/CCudaModule.cpp
 
 CMakeFiles/CameraPlugin.dir/modules/src/CCudaModule.cpp.i: cmake_force
@@ -649,7 +677,7 @@ CMakeFiles/CameraPlugin.dir/modules/src/CCudaModule.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/modules/src/CFrameReader.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/modules/src/CFrameReader.cpp.o: /home/lw/Workspace/CameraPlugin/modules/src/CFrameReader.cpp
 CMakeFiles/CameraPlugin.dir/modules/src/CFrameReader.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CFrameReader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/CameraPlugin.dir/modules/src/CFrameReader.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/modules/src/CFrameReader.cpp.o -MF CMakeFiles/CameraPlugin.dir/modules/src/CFrameReader.cpp.o.d -o CMakeFiles/CameraPlugin.dir/modules/src/CFrameReader.cpp.o -c /home/lw/Workspace/CameraPlugin/modules/src/CFrameReader.cpp
 
 CMakeFiles/CameraPlugin.dir/modules/src/CFrameReader.cpp.i: cmake_force
@@ -663,7 +691,7 @@ CMakeFiles/CameraPlugin.dir/modules/src/CFrameReader.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/config/src/COptionParser.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/config/src/COptionParser.cpp.o: /home/lw/Workspace/CameraPlugin/config/src/COptionParser.cpp
 CMakeFiles/CameraPlugin.dir/config/src/COptionParser.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/CameraPlugin.dir/config/src/COptionParser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/CameraPlugin.dir/config/src/COptionParser.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/config/src/COptionParser.cpp.o -MF CMakeFiles/CameraPlugin.dir/config/src/COptionParser.cpp.o.d -o CMakeFiles/CameraPlugin.dir/config/src/COptionParser.cpp.o -c /home/lw/Workspace/CameraPlugin/config/src/COptionParser.cpp
 
 CMakeFiles/CameraPlugin.dir/config/src/COptionParser.cpp.i: cmake_force
@@ -677,7 +705,7 @@ CMakeFiles/CameraPlugin.dir/config/src/COptionParser.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/config/src/CCmdLineParser.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/config/src/CCmdLineParser.cpp.o: /home/lw/Workspace/CameraPlugin/config/src/CCmdLineParser.cpp
 CMakeFiles/CameraPlugin.dir/config/src/CCmdLineParser.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/CameraPlugin.dir/config/src/CCmdLineParser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/CameraPlugin.dir/config/src/CCmdLineParser.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/config/src/CCmdLineParser.cpp.o -MF CMakeFiles/CameraPlugin.dir/config/src/CCmdLineParser.cpp.o.d -o CMakeFiles/CameraPlugin.dir/config/src/CCmdLineParser.cpp.o -c /home/lw/Workspace/CameraPlugin/config/src/CCmdLineParser.cpp
 
 CMakeFiles/CameraPlugin.dir/config/src/CCmdLineParser.cpp.i: cmake_force
@@ -691,7 +719,7 @@ CMakeFiles/CameraPlugin.dir/config/src/CCmdLineParser.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/config/src/CConfig.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/config/src/CConfig.cpp.o: /home/lw/Workspace/CameraPlugin/config/src/CConfig.cpp
 CMakeFiles/CameraPlugin.dir/config/src/CConfig.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/CameraPlugin.dir/config/src/CConfig.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/CameraPlugin.dir/config/src/CConfig.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/config/src/CConfig.cpp.o -MF CMakeFiles/CameraPlugin.dir/config/src/CConfig.cpp.o.d -o CMakeFiles/CameraPlugin.dir/config/src/CConfig.cpp.o -c /home/lw/Workspace/CameraPlugin/config/src/CConfig.cpp
 
 CMakeFiles/CameraPlugin.dir/config/src/CConfig.cpp.i: cmake_force
@@ -705,7 +733,7 @@ CMakeFiles/CameraPlugin.dir/config/src/CConfig.cpp.s: cmake_force
 CMakeFiles/CameraPlugin.dir/config/src/CElementDescriptionCollector.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
 CMakeFiles/CameraPlugin.dir/config/src/CElementDescriptionCollector.cpp.o: /home/lw/Workspace/CameraPlugin/config/src/CElementDescriptionCollector.cpp
 CMakeFiles/CameraPlugin.dir/config/src/CElementDescriptionCollector.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/CameraPlugin.dir/config/src/CElementDescriptionCollector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/CameraPlugin.dir/config/src/CElementDescriptionCollector.cpp.o"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/config/src/CElementDescriptionCollector.cpp.o -MF CMakeFiles/CameraPlugin.dir/config/src/CElementDescriptionCollector.cpp.o.d -o CMakeFiles/CameraPlugin.dir/config/src/CElementDescriptionCollector.cpp.o -c /home/lw/Workspace/CameraPlugin/config/src/CElementDescriptionCollector.cpp
 
 CMakeFiles/CameraPlugin.dir/config/src/CElementDescriptionCollector.cpp.i: cmake_force
@@ -716,15 +744,59 @@ CMakeFiles/CameraPlugin.dir/config/src/CElementDescriptionCollector.cpp.s: cmake
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CameraPlugin.dir/config/src/CElementDescriptionCollector.cpp.s"
 	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lw/Workspace/CameraPlugin/config/src/CElementDescriptionCollector.cpp -o CMakeFiles/CameraPlugin.dir/config/src/CElementDescriptionCollector.cpp.s
 
+CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.o: CMakeFiles/CameraPlugin.dir/flags.make
+CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.o: /home/lw/Workspace/CameraPlugin/features/low_power_mode/src/CPvaLowPowerAlgos.cpp
+CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.o"
+	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.o -MF CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.o.d -o CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.o -c /home/lw/Workspace/CameraPlugin/features/low_power_mode/src/CPvaLowPowerAlgos.cpp
+
+CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.i"
+	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lw/Workspace/CameraPlugin/features/low_power_mode/src/CPvaLowPowerAlgos.cpp > CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.i
+
+CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.s"
+	/drive/toolchains/aarch64--glibc--stable-2022.03-1/bin/aarch64-buildroot-linux-gnu-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lw/Workspace/CameraPlugin/features/low_power_mode/src/CPvaLowPowerAlgos.cpp -o CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.s
+
+CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.o: CMakeFiles/CameraPlugin.dir/flags.make
+CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.o: CMakeFiles/CameraPlugin.dir/includes_CUDA.rsp
+CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.o: /home/lw/Workspace/CameraPlugin/utils/src/cudaYUV-NV12.cu
+CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CUDA object CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.o"
+	/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -ccbin=/usr/bin/aarch64-linux-gnu-g++ $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.o -MF CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.o.d -x cu -c /home/lw/Workspace/CameraPlugin/utils/src/cudaYUV-NV12.cu -o CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.o
+
+CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CUDA source to assembly CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
+
+CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.o: CMakeFiles/CameraPlugin.dir/flags.make
+CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.o: CMakeFiles/CameraPlugin.dir/includes_CUDA.rsp
+CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.o: /home/lw/Workspace/CameraPlugin/utils/src/cvt2d_kernels.cu
+CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.o: CMakeFiles/CameraPlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CUDA object CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.o"
+	/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler -ccbin=/usr/bin/aarch64-linux-gnu-g++ $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.o -MF CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.o.d -x cu -c /home/lw/Workspace/CameraPlugin/utils/src/cvt2d_kernels.cu -o CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.o
+
+CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CUDA source to assembly CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
+
 # Object files for target CameraPlugin
 CameraPlugin_OBJECTS = \
-"CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.o" \
+"CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.o" \
+"CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o" \
 "CMakeFiles/CameraPlugin.dir/utils/src/CThreadPool.cpp.o" \
 "CMakeFiles/CameraPlugin.dir/utils/src/CUtils.cpp.o" \
 "CMakeFiles/CameraPlugin.dir/utils/src/CTimer.cpp.o" \
 "CMakeFiles/CameraPlugin.dir/utils/src/CFileSink.cpp.o" \
 "CMakeFiles/CameraPlugin.dir/utils/src/CLogger.cpp.o" \
-"CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o" \
 "CMakeFiles/CameraPlugin.dir/core/src/CPassthroughConsumer.cpp.o" \
 "CMakeFiles/CameraPlugin.dir/core/src/CProducer.cpp.o" \
 "CMakeFiles/CameraPlugin.dir/core/src/CNvPlayfairWrapper.cpp.o" \
@@ -735,6 +807,8 @@ CameraPlugin_OBJECTS = \
 "CMakeFiles/CameraPlugin.dir/core/src/CFactory.cpp.o" \
 "CMakeFiles/CameraPlugin.dir/core/src/CPassthroughPoolManager.cpp.o" \
 "CMakeFiles/CameraPlugin.dir/core/src/CStatusManager.cpp.o" \
+"CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.o" \
+"CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.o" \
 "CMakeFiles/CameraPlugin.dir/core/src/CPeerValidator.cpp.o" \
 "CMakeFiles/CameraPlugin.dir/core/src/CPoolManager.cpp.o" \
 "CMakeFiles/CameraPlugin.dir/core/src/CBufAggregator.cpp.o" \
@@ -763,18 +837,21 @@ CameraPlugin_OBJECTS = \
 "CMakeFiles/CameraPlugin.dir/config/src/COptionParser.cpp.o" \
 "CMakeFiles/CameraPlugin.dir/config/src/CCmdLineParser.cpp.o" \
 "CMakeFiles/CameraPlugin.dir/config/src/CConfig.cpp.o" \
-"CMakeFiles/CameraPlugin.dir/config/src/CElementDescriptionCollector.cpp.o"
+"CMakeFiles/CameraPlugin.dir/config/src/CElementDescriptionCollector.cpp.o" \
+"CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.o" \
+"CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.o" \
+"CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.o"
 
 # External object files for target CameraPlugin
 CameraPlugin_EXTERNAL_OBJECTS =
 
-libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/CameraPlugin.cpp.o
+libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/plugin/src/CameraPlugin.cpp.o
+libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/utils/src/CThreadPool.cpp.o
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/utils/src/CUtils.cpp.o
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/utils/src/CTimer.cpp.o
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/utils/src/CFileSink.cpp.o
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/utils/src/CLogger.cpp.o
-libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/plugin/src/ConfigParser.cpp.o
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/core/src/CPassthroughConsumer.cpp.o
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/core/src/CProducer.cpp.o
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/core/src/CNvPlayfairWrapper.cpp.o
@@ -785,6 +862,8 @@ libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/core/src/CPassthroughProducer.cp
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/core/src/CFactory.cpp.o
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/core/src/CPassthroughPoolManager.cpp.o
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/core/src/CStatusManager.cpp.o
+libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerClient.cpp.o
+libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/services/status_manager/src/CStatusManagerCommon.cpp.o
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/core/src/CPeerValidator.cpp.o
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/core/src/CPoolManager.cpp.o
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/core/src/CBufAggregator.cpp.o
@@ -814,9 +893,12 @@ libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/config/src/COptionParser.cpp.o
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/config/src/CCmdLineParser.cpp.o
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/config/src/CConfig.cpp.o
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/config/src/CElementDescriptionCollector.cpp.o
+libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/features/low_power_mode/src/CPvaLowPowerAlgos.cpp.o
+libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/utils/src/cudaYUV-NV12.cu.o
+libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/utils/src/cvt2d_kernels.cu.o
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/build.make
 libCameraPlugin.so: CMakeFiles/CameraPlugin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Linking CXX shared library libCameraPlugin.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lw/Workspace/CameraPlugin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Linking CXX shared library libCameraPlugin.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CameraPlugin.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

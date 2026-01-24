@@ -244,11 +244,7 @@ CMakeFiles/CameraPlugin.dir/core/src/CManager.cpp.o: \
  /home/lw/Workspace/CameraPlugin/config/include/CConfig.hpp \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/unordered_set \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/unordered_set.h \
- /drive/drive-linux/include/nverror.h \
- /drive/drive-linux/include/nverrval.h \
- /home/lw/Workspace/CameraPlugin/utils/include/Common.hpp \
- /home/lw/Workspace/CameraPlugin/utils/include/CUtils.hpp \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/cstdarg \
+ /home/lw/Workspace/CameraPlugin/control_channel/include/CControlChannelManager.hpp \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/condition_variable \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/chrono \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/ratio \
@@ -257,6 +253,18 @@ CMakeFiles/CameraPlugin.dir/core/src/CManager.cpp.o: \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/std_mutex.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/unique_lock.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/mutex \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/queue \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/deque \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_deque.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/deque.tcc \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_queue.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/set \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_tree.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_set.h \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_multiset.h \
+ /home/lw/Workspace/CameraPlugin/control_channel/include/CMsgReader.hpp \
+ /home/lw/Workspace/CameraPlugin/utils/include/CUtils.hpp \
+ /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/cstdarg \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/atomic \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/regex \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bitset \
@@ -273,12 +281,8 @@ CMakeFiles/CameraPlugin.dir/core/src/CManager.cpp.o: \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/sstream \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/sstream.tcc \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/stack \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/deque \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_deque.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/deque.tcc \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_stack.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/map \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_tree.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_map.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_multimap.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/regex_constants.h \
@@ -357,14 +361,9 @@ CMakeFiles/CameraPlugin.dir/core/src/CManager.cpp.o: \
  /home/lw/Workspace/CameraPlugin/core/include/CNvPlayfairWrapper.hpp \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/dlfcn.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/sysroot/usr/include/bits/dlfcn.h \
+ /drive/drive-linux/include/nverror.h \
+ /drive/drive-linux/include/nverrval.h \
  /home/lw/Workspace/CameraPlugin/utils/include/CLogger.hpp \
- /home/lw/Workspace/CameraPlugin/control_channel/include/CControlChannelManager.hpp \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/queue \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_queue.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/set \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_set.h \
- /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/stl_multiset.h \
- /home/lw/Workspace/CameraPlugin/control_channel/include/CMsgReader.hpp \
  /home/lw/Workspace/CameraPlugin/control_channel/include/CMsgCommon.hpp \
  /home/lw/Workspace/CameraPlugin/control_channel/include/CMsgWriter.hpp \
  /home/lw/Workspace/CameraPlugin/control_channel/include/CIpcLinkLinux.hpp \
@@ -375,27 +374,28 @@ CMakeFiles/CameraPlugin.dir/core/src/CManager.cpp.o: \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/future \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/atomic_futex.h \
  /home/lw/Workspace/CameraPlugin/utils/include/CUtils.hpp \
- /home/lw/Workspace/CameraPlugin/utils/include/CTimer.hpp \
- /home/lw/Workspace/CameraPlugin/utils/include/CThreadPool.hpp \
  /home/lw/Workspace/CameraPlugin/config/include/COptionParser.hpp \
  /home/lw/Workspace/CameraPlugin/core/include/CPeerValidator.hpp \
+ /home/lw/Workspace/CameraPlugin/utils/include/CTimer.hpp \
+ /home/lw/Workspace/CameraPlugin/utils/include/CThreadPool.hpp \
+ /home/lw/Workspace/CameraPlugin/utils/include/Common.hpp \
  /home/lw/Workspace/CameraPlugin/core/include/CChannel.hpp \
  /home/lw/Workspace/CameraPlugin/core/include/CClientCommon.hpp \
- /drive/drive-linux/include/nvscistream.h \
  /home/lw/Workspace/CameraPlugin/core/include/CEventHandler.hpp \
  /home/lw/Workspace/CameraPlugin/core/include/CProfiler.hpp \
  /home/lw/Workspace/CameraPlugin/core/include/CNvPlayfairWrapper.hpp \
+ /drive/drive-linux/include/nvscistream.h \
  /home/lw/Workspace/CameraPlugin/core/include/CBaseModule.hpp \
- /home/lw/Workspace/CameraPlugin/core/include/CConsumer.hpp \
- /home/lw/Workspace/CameraPlugin/core/include/CPoolManager.hpp \
- /home/lw/Workspace/CameraPlugin/core/include/CProducer.hpp \
- /home/lw/Workspace/CameraPlugin/core/include/CSyncAggregator.hpp \
  /home/lw/Workspace/CameraPlugin/core/include/CBufAggregator.hpp \
- /home/lw/Workspace/CameraPlugin/config/include/COptionParser.hpp \
+ /home/lw/Workspace/CameraPlugin/core/include/CProducer.hpp \
+ /home/lw/Workspace/CameraPlugin/core/include/CPoolManager.hpp \
+ /home/lw/Workspace/CameraPlugin/core/include/CConsumer.hpp \
  /home/lw/Workspace/CameraPlugin/core/include/CElementDescription.hpp \
+ /home/lw/Workspace/CameraPlugin/config/include/COptionParser.hpp \
  /home/lw/Workspace/CameraPlugin/utils/include/CFileSink.hpp \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/fstream \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/aarch64-buildroot-linux-gnu/bits/basic_file.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/aarch64-buildroot-linux-gnu/bits/c++io.h \
  /drive/toolchains/aarch64--glibc--stable-2022.03-1/aarch64-buildroot-linux-gnu/include/c++/9.3.0/bits/fstream.tcc \
+ /home/lw/Workspace/CameraPlugin/core/include/CSyncAggregator.hpp \
  /drive/drive-linux/include/NvSIPLPipelineMgr.hpp

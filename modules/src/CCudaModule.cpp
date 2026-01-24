@@ -15,6 +15,7 @@
 // cuda cvt2d kernels includes
 #ifndef NVMEDIA_QNX
 #include "cvt2d_kernels.h"
+#include "cudaYUV.h"
 #endif
 
 #if BUILD_CARDETECT
@@ -75,9 +76,21 @@ NvError CCudaModule::InitCuda()
     cudaStatus = cudaStreamCreateWithFlags(&m_streamWaiter, cudaStreamNonBlocking);
     PCHK_CUDASTATUS_AND_RETURN(cudaStatus, "cudaStreamCreateWithFlags");
 
+    auto sensor_id = GetSensorId();
+    auto config = m_pAppCfg->GetCameraConfig(sensor_id);
+    if(config) {
+        return NvError_BadParameter;
+    }
+    m_cudaInputInfo.uCvtWidth = config->width;
+    m_cudaInputInfo.uCvtHeight = config->height;
+    m_cudaInputInfo.uHeight = config->height;
+    m_cudaInputInfo.uWidth = config->width;
+    m_cudaInputInfo.sImageLayout = "BL";
+
+    image_size_ = m_cudaInputInfo.uCvtWidth * m_cudaInputInfo.uCvtHeight *
+                            3 * sizeof(uint8_t);
     cudaStatus = cudaMalloc(&m_pCvtDevPtrs,
-                            m_cudaInputInfo.uCvtWidth * m_cudaInputInfo.uCvtHeight *
-                            3 * sizeof(float));
+                            image_size_);
     PCHK_CUDASTATUS_AND_RETURN(cudaStatus, "cudaMalloc m_pCvtDevPtrs");
     PLOG_DBG("Created consumer's CUDA stream.\n");
 
@@ -161,6 +174,12 @@ void CCudaModule::DeInit()
             cudaFree(m_pCvtDevPtrs);
             m_pCvtDevPtrs = nullptr;
         }
+
+        if(output_buffer_ != nullptr) {
+            cudaFree(output_buffer_);
+            output_buffer_ = nullptr;
+        }
+
         if (m_extMem[i] != 0) {
             cudaDestroyExternalMemory(m_extMem[i]);
             m_extMem[i] = nullptr;
@@ -343,6 +362,34 @@ NvError CCudaModule::InsertPrefence(CClientCommon *pClient,
     return NvError_Success;
 }
 
+NvError CCudaModule::BlToPlConvertWithGPU(uint32_t uPacketIndex, void *pDstPtr)
+{
+    uint8_t *pPlaneAddrs[2] = { nullptr };
+
+    auto cudaStatus = cudaGetMipmappedArrayLevel(&m_mipLevelArray[uPacketIndex][0U], m_mipmapArray[uPacketIndex][0], 0U);
+    PCHK_CUDASTATUS_AND_RETURN(cudaStatus, "cudaGetMipmappedArrayLevel");
+    cudaStatus = cudaGetMipmappedArrayLevel(&m_mipLevelArray[uPacketIndex][1U], m_mipmapArray[uPacketIndex][1], 0U);
+    PCHK_CUDASTATUS_AND_RETURN(cudaStatus, "cudaGetMipmappedArrayLevel");
+
+    pPlaneAddrs[0] = (uint8_t *)&m_mipLevelArray[uPacketIndex][0U];
+    pPlaneAddrs[1] = (uint8_t *)&m_mipLevelArray[uPacketIndex][1U];
+    cudaStatus = cudaMemcpy2DFromArrayAsync(
+        pDstPtr, (size_t)m_bufAttrs[uPacketIndex].planeWidths[0U], *((cudaArray_const_t *)pPlaneAddrs[0]), 0, 0,
+        (size_t)m_bufAttrs[uPacketIndex].planeWidths[0U], (size_t)m_bufAttrs[uPacketIndex].planeHeights[0U],
+        cudaMemcpyDeviceToDevice, m_streamWaiter);
+    PCHK_CUDASTATUS_AND_RETURN(cudaStatus, "cudaMemcpy2DFromArrayAsync for plane 0");
+
+    uint8_t *pSecondDst = (uint8_t *)pDstPtr + (size_t)(m_bufAttrs[uPacketIndex].planeWidths[0U] *
+                                                        m_bufAttrs[uPacketIndex].planeHeights[0U]);
+    cudaStatus = cudaMemcpy2DFromArrayAsync(
+        (void *)(pSecondDst), (size_t)m_bufAttrs[uPacketIndex].planeWidths[0U], *((cudaArray_const_t *)pPlaneAddrs[1]),
+        0, 0, (size_t)m_bufAttrs[uPacketIndex].planeWidths[0U], (size_t)(m_bufAttrs[uPacketIndex].planeHeights[0U] / 2),
+        cudaMemcpyDeviceToDevice, m_streamWaiter);
+    PCHK_CUDASTATUS_AND_RETURN(cudaStatus, "cudaMemcpy2DFromArrayAsync for plane 1");
+
+    return NvError_Success;
+}
+
 NvError CCudaModule::BlToPlConvert(uint32_t uPacketIndex, void *pDstPtr)
 {
     uint8_t *pPlaneAddrs[2] = { nullptr };
@@ -417,9 +464,9 @@ NvError CCudaModule::ProcessPayload(CClientCommon *pClient, uint32_t uPacketInde
             error = NvError_Success;
             cudaArray_t vaddr_plane[2] = { nullptr };
             auto cudaStatus = cudaGetMipmappedArrayLevel(&vaddr_plane[0U], m_mipmapArray[uPacketIndex][0], 0U);
-            CHK_CUDASTATUS_AND_RETURN(cudaStatus, "cudaGetMipmappedArrayLevel");
+            PCHK_CUDASTATUS_AND_RETURN(cudaStatus, "cudaGetMipmappedArrayLevel");
             cudaStatus = cudaGetMipmappedArrayLevel(&vaddr_plane[1U], m_mipmapArray[uPacketIndex][1], 0U);
-            CHK_CUDASTATUS_AND_RETURN(cudaStatus, "cudaGetMipmappedArrayLevel");
+            PCHK_CUDASTATUS_AND_RETURN(cudaStatus, "cudaGetMipmappedArrayLevel");
             bool result = CvtNv12blToRgbPlanar(vaddr_plane, m_cudaInputInfo.uWidth, m_cudaInputInfo.uHeight,
                                                m_pCvtDevPtrs, m_cudaInputInfo.uCvtWidth,
                                                m_cudaInputInfo.uCvtHeight, 1, 1.0f, m_streamWaiter);
@@ -429,6 +476,19 @@ NvError CCudaModule::ProcessPayload(CClientCommon *pClient, uint32_t uPacketInde
             }
         }
 #endif
+        error = BlToPlConvertWithGPU(uPacketIndex, output_buffer_);
+        if (error != NvError_Success) {
+            PLOG_ERR("BlToPlConvert failed: %u\n", error);
+            m_uOutputBufValidLen = 0;
+        } else {
+            PLOG_DBG("ProcessPayload succeed.\n");
+        }
+
+        auto cudaStatus = cudaNV12ToRGB(output_buffer_, (uchar3*)m_pCvtDevPtrs, m_cudaInputInfo.uWidth, m_cudaInputInfo.uHeight, m_streamWaiter);
+        PCHK_CUDASTATUS_AND_RETURN(cudaStatus, "cudaNV12ToRGB output_buffer_");
+
+        cudaStreamSynchronize(m_streamWaiter);
+        m_pAppCfg->CallCameraPlugin(GetSensorId(), time(NULL), (uint8_t *)m_pCvtDevPtrs, image_size_);
 
         if (m_upFileSink) {
             error = BlToPlConvert(uPacketIndex, (void *)m_upOutputBuf.get());
@@ -532,6 +592,8 @@ NvError CCudaModule::RegisterBufObj(CClientCommon *pClient,
             PLOG_ERR("Out of memory\n");
             return NvError_InsufficientMemory;
         }
+        cudaStatus = cudaMalloc(&output_buffer_, m_uOutputBufCapacity);
+        PCHK_CUDASTATUS_AND_RETURN(cudaStatus, "cudaMalloc output_buffer_");
     }
 
     if (bufAttrs.layout == NvSciBufImage_BlockLinearType) {

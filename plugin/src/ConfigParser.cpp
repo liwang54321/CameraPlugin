@@ -1,6 +1,5 @@
 #include "ConfigParser.hpp"
 
-#include <syslog.h>
 #include <fstream>
 #include <atomic>
 #include <filesystem>
@@ -35,27 +34,26 @@ static inline void from_json(const nlohmann::json& j, CameraConfigTotal& c) {
 class ConfigParserImpl {
    public:
     ConfigParserImpl(const std::string& config) : config_{config} {}
-
     ~ConfigParserImpl(void) {}
 
     bool Parser(void) {
         std::error_code ec;
         auto ret = std::filesystem::exists(config_, ec);
         if (!ret) {
-            syslog(LOG_ERR, "Config file %s does not exist", config_.c_str());
+            LOG_ERR("Config file %s does not exist", config_.c_str());
             return false;
         }
 
         std::ifstream ifs(config_);
         if(!ifs.is_open()) {
-            syslog(LOG_ERR, "Failed to open file %s\n", config_);
+            LOG_ERR("Failed to open file %s\n", config_);
             return false;
         }
         CameraConfigTotal total;
         try {
             total = nlohmann::json::parse(ifs);
         } catch (const std::exception& e) {
-            syslog(LOG_ERR, "Failed To parser json %s\n", e.what());
+            LOG_ERR("Failed To parser json %s\n", e.what());
             return false;
         }
 

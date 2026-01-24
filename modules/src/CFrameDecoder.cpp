@@ -20,14 +20,19 @@
 #include "CEventHandler.hpp"
 
 CFrameDecoder::CFrameDecoder(FileSourceType type,
-                             const std::string &sFilePath,
+                            const std::string &src_ip,
+                            uint16_t src_port,
+                            const std::string &dst_ip,
                              uint32_t uWidth,
                              uint32_t uHeight,
                              int sensorId,
                              uint32_t uInstanceId)
-    : CFrameHandler(type, sFilePath, uWidth, uHeight, sensorId)
+    : CFrameHandler(type, "none path", uWidth, uHeight, sensorId)
     , m_uInstanceId(uInstanceId)
 {
+    src_ip_ = src_ip;
+    src_port_ = src_port;
+    dst_ip_ = dst_ip;
     m_clientCb = { &cbBeginSequence,
                    &cbDecodePicture,
                    &cbDisplayPicture,
@@ -58,6 +63,12 @@ NvError CFrameDecoder::Init()
         PLOG_ERR("Init: Invalid input codec type.\n");
         return NvError_BadParameter;
     }
+
+    sess_ = ctx_.create_session(src_ip_, dst_ip_);
+    int flags = RCE_RECEIVE_ONLY;
+    receiver_ =
+        sess_->create_stream(src_port_, RTP_FORMAT_H265, flags);
+
     m_clientCtx.pParser = nullptr;
     m_clientCtx.decodeWidth = GetFrameWidth();
     m_clientCtx.decodeHeight = GetFrameHeight();
@@ -91,7 +102,7 @@ NvError CFrameDecoder::Init()
     float defaultDecFrameRate = 30.0f;
     NvMediaParserSetAttribute(m_clientCtx.pParser, NvMParseAttr_SetDefaultFramerate, sizeof(float),
                               &defaultDecFrameRate);
-
+#if 0
     std::string sInputCodecFilePath = GetCameraDirName() + "/" + CODEC_FILE_PREFIX +
                                       IntToStringWithLeadingZero(GetSensorId()) + sInputCodecFileSuffix;
     m_inputCodecFile = fopen(sInputCodecFilePath.c_str(), "rb");
@@ -105,7 +116,7 @@ NvError CFrameDecoder::Init()
         PLOG_ERR("Init: Failed allocating memory for code stream buffer.\n");
         return NvError_InsufficientMemory;
     }
-
+#endif
     m_upDecodeHandler = std::make_unique<CEventHandler<CFrameDecoder>>();
     auto error = m_upDecodeHandler->RegisterHandler(&CFrameDecoder::Decode, this);
     PCHK_ERROR_AND_RETURN(error, "RegisterHandler");
@@ -212,6 +223,13 @@ void CFrameDecoder::DeInit()
     if (m_codecStreamBuf) {
         delete[] m_codecStreamBuf;
         m_codecStreamBuf = nullptr;
+    }
+    if (receiver_) {
+        sess_->destroy_stream(receiver_);
+    }
+
+    if (sess_) {
+        ctx_.destroy_session(sess_);
     }
 }
 
@@ -724,30 +742,44 @@ EventStatus CFrameDecoder::Decode()
 {
     uint32_t uReadSize = IDE_CODEC_STREAM_READ_SIZE;
     uint32_t bitstream_error = 0;
-
+#if 0
     if (!m_codecStreamBuf) {
         LOG_ERR("CFrameDecoder::Decode: No valid code stream buffer.\n");
         return EventStatus::ERROR;
     }
-
-    while (!feof(m_inputCodecFile) && !m_clientCtx.bQuitDecoding.load()) {
+#endif
+    while (!m_clientCtx.bQuitDecoding.load()) {
         // to support r/s feature
         while (m_clientCtx.bStopDecoding.load() && !m_clientCtx.bQuitDecoding.load()) {
             std::this_thread::sleep_for(std::chrono::milliseconds(SLEEP_FOR_PACKET_MS));
         }
+
+        uvgrtp::frame::rtp_frame* frame = receiver_->pull_frame(SLEEP_FOR_PACKET_MS);
         NvMediaBitStreamPkt packet;
         memset(&packet, 0, sizeof(NvMediaBitStreamPkt));
-        size_t len = fread(m_codecStreamBuf, 1, uReadSize, m_inputCodecFile);
-        packet.uDataLength = (uint32_t)len;
-        packet.pByteStream = m_codecStreamBuf;
+        // size_t len = fread(m_codecStreamBuf, 1, uReadSize, m_inputCodecFile);
+
+        auto p_data = frame->payload;
+        auto data_len = frame->payload_len;
+        auto nalu_type = (frame->payload[4] >> 1) & 0x3f;
+        auto nalu_offset =
+            (nalu_type == 39) || (nalu_type == 20) || (nalu_type == 21);
+        if (nalu_offset) {
+            p_data = frame->payload + 1;
+            data_len -= 1;
+        }
+        packet.uDataLength = (uint32_t)data_len;
+        packet.pByteStream = p_data;
         packet.bEOS = feof(m_inputCodecFile) ? true : false;
         LOG_DBG("CFrameDecoder Decode: EOS %d is sent...\n", packet.bEOS);
         packet.bPTSValid = 0; // (pts != (uint32_t)-1);
         packet.llPts = 0;     // packet.bPTSValid ? (1000 * pts / 9)  : 0;    // 100 ns scale
         if (NvMediaParserParse(m_clientCtx.pParser, &packet) != NVMEDIA_STATUS_OK) {
             LOG_ERR("CFrameDecoder Decode: NvMediaParserParse returned with failure.\n");
+            uvgrtp::frame::dealloc_frame(frame);
             return EventStatus::ERROR;
         }
+        uvgrtp::frame::dealloc_frame(frame);
     }
     NvMediaParserFlush(m_clientCtx.pParser);
     LOG_DBG("CFrameDecoder Decode: Finished decoding. Flushing parser and display.\n");

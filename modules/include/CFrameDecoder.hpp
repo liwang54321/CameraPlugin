@@ -29,6 +29,7 @@
 #include "Common.hpp"
 #include "CEventHandler.hpp"
 #include "CFrameHandler.hpp"
+#include "uvgrtp/lib.hh"
 
 typedef struct _FrameBuffer
 {
@@ -98,7 +99,9 @@ class CFrameDecoder : public CFrameHandler
 {
   public:
     CFrameDecoder(FileSourceType type,
-                  const std::string &sFilePath,
+                  const std::string &src_ip,
+                  uint16_t src_port,
+                  const std::string &dst_ip,
                   uint32_t uWidth,
                   uint32_t uHeight,
                   int sensorId,
@@ -164,6 +167,12 @@ class CFrameDecoder : public CFrameHandler
     std::unique_ptr<CEventHandler<CFrameDecoder>> m_upDecodeHandler;
     uint8_t *m_codecStreamBuf{ nullptr };
     std::string m_name{ "FrameDecoder" };
+    uvgrtp::context ctx_;
+    uvgrtp::session* sess_;
+    uvgrtp::media_stream* receiver_;
+    std::string src_ip_;
+    uint16_t src_port_;
+    std::string dst_ip_;
 };
 
 #endif // !NV_IS_SAFETY

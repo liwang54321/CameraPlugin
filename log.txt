@@ -1,0 +1,15 @@
+nvvideo
+nvos
+nvsocsys
+nvrm_surface
+nvscievent
+nvrm_mem
+nvvic
+nvrm_gpu
+gnat-24
+nvrm_host1x
+nvidia-kms
+nvsipl_devblk
+nvfusacap
+nvsipl_control
+nvparser

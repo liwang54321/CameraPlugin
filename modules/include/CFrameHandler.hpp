@@ -70,6 +70,9 @@ class CFrameHandler
 
 std::unique_ptr<CFrameHandler> CreateFrameHandler(FileSourceType type,
                                                   const std::string &sFilePath,
+                                                  const std::string &src_ip,
+                                                  uint16_t src_port,
+                                                  const std::string &dst_ip,
                                                   uint32_t uWidth,
                                                   uint32_t uHeight,
                                                   int sensorId,

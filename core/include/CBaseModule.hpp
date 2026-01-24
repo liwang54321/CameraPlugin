@@ -1,6 +1,6 @@
 /*
- * SPDX-FileCopyrightText: Copyright (c) 2023-2025 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
- * SPDX-License-Identifier: LicenseRef-NvidiaProprietary
+ * SPDX-FileCopyrightText: Copyright (c) 2023-2025 NVIDIA CORPORATION & AFFILIATES. All rights
+ * reserved. SPDX-License-Identifier: LicenseRef-NvidiaProprietary
  *
  * NVIDIA CORPORATION, its affiliates and licensors retain all intellectual
  * property and proprietary rights in and to this material, related
@@ -13,24 +13,23 @@
 #ifndef CBASEMODULE_HPP
 #define CBASEMODULE_HPP
 
-#include <unordered_map>
 #include <chrono>
 #include <mutex>
+#include <unordered_map>
 
-#include "nvscibuf.h"
-#include "CConsumer.hpp"
-#include "CProducer.hpp"
-#include "CSyncAggregator.hpp"
 #include "CBufAggregator.hpp"
-#include "CUtils.hpp"
-#include "COptionParser.hpp"
+#include "CConsumer.hpp"
 #include "CElementDescription.hpp"
-#include "CProfiler.hpp"
 #include "CFileSink.hpp"
+#include "COptionParser.hpp"
+#include "CProducer.hpp"
+#include "CProfiler.hpp"
+#include "CSyncAggregator.hpp"
+#include "CUtils.hpp"
+#include "nvscibuf.h"
 
-class CBaseModule : public CClientCommon::IModuleCallback
-{
-  public:
+class CBaseModule : public CClientCommon::IModuleCallback {
+public:
     CBaseModule(std::shared_ptr<CModuleCfg> spModuleCfg, IEventListener<CBaseModule> *pListener);
     /** @brief Default destructor. */
     virtual ~CBaseModule();
@@ -63,10 +62,9 @@ class CBaseModule : public CClientCommon::IModuleCallback
     inline ModuleType GetModuleType() const { return m_spModuleCfg->m_moduleType; }
     inline void SetConsumerNumber(int consumerNumber) { m_numConsumers = consumerNumber; }
 
-    NvError
-    FillDataBufAttrList(CClientCommon *pClient, PacketElementType userType, NvSciBufAttrList *pBufAttrList) override;
-    NvError FillSyncWaiterAttrList(CClientCommon *pClient,
-                                   PacketElementType userType,
+    NvError FillDataBufAttrList(CClientCommon *pClient, PacketElementType userType,
+                                NvSciBufAttrList *pBufAttrList) override;
+    NvError FillSyncWaiterAttrList(CClientCommon *pClient, PacketElementType userType,
                                    NvSciSyncAttrList *pWaiterAttrList) override;
     NvError ParseOptions();
     virtual const OptionTable *GetOptionTable() const { return nullptr; };
@@ -76,29 +74,30 @@ class CBaseModule : public CClientCommon::IModuleCallback
 
     virtual const std::string &GetProdElemsName() const { return m_baseModuleOption.sElems; };
 
-  protected:
+protected:
     virtual NvError OnProcessPayloadDone(CClientCommon *pClient, uint32_t uPacketIndex) override;
-    virtual NvError ProcessPayload(std::vector<NvSciBufObj> &vSrcBufObjs, NvSciBufObj dstBufObj, MetaData *pMetaData)
-    {
+    virtual NvError ProcessPayload(std::vector<NvSciBufObj> &vSrcBufObjs, NvSciBufObj dstBufObj,
+                                   MetaData *pMetaData) {
         return NvError_Success;
     };
-    virtual NvError OnPacketGotten(CClientCommon *pClient, uint32_t uPacketIndex, bool *pHandled = nullptr) override;
-    virtual NvError FillMetaBufAttrList(CClientCommon *pClient, NvSciBufAttrList *pBufAttrList) override;
+    virtual NvError OnPacketGotten(CClientCommon *pClient, uint32_t uPacketIndex,
+                                   bool *pHandled = nullptr) override;
+    virtual NvError FillMetaBufAttrList(CClientCommon *pClient,
+                                        NvSciBufAttrList *pBufAttrList) override;
     virtual NvError SetEofSyncObj(CClientCommon *pClient) { return NvError_Success; }
-    virtual NvError GetEofSyncFence(CClientCommon *pClient, NvSciSyncFence *pPostfence) { return NvError_Success; }
-    virtual NvError OnDataBufAttrListRecvd(CClientCommon *pClient, NvSciBufAttrList bufAttrList)
-    {
+    virtual NvError GetEofSyncFence(CClientCommon *pClient, NvSciSyncFence *pPostfence) {
+        return NvError_Success;
+    }
+    virtual NvError OnDataBufAttrListRecvd(CClientCommon *pClient, NvSciBufAttrList bufAttrList) {
         return NvError_Success;
     }
     virtual NvError OnWaiterAttrEventRecvd(CClientCommon *pClient, bool &bHandled) override;
-    virtual NvError RegisterBufObj(CClientCommon *pClient,
-                                   PacketElementType userType,
-                                   uint32_t uPacketIndex,
-                                   NvSciBufObj bufObj) override;
-    virtual NvError
-    RegisterSignalSyncObj(CClientCommon *pClient, PacketElementType userType, NvSciSyncObj signalSyncObj) override;
-    virtual NvError
-    RegisterWaiterSyncObj(CClientCommon *pClient, PacketElementType userType, NvSciSyncObj waiterSyncObj) override;
+    virtual NvError RegisterBufObj(CClientCommon *pClient, PacketElementType userType,
+                                   uint32_t uPacketIndex, NvSciBufObj bufObj) override;
+    virtual NvError RegisterSignalSyncObj(CClientCommon *pClient, PacketElementType userType,
+                                          NvSciSyncObj signalSyncObj) override;
+    virtual NvError RegisterWaiterSyncObj(CClientCommon *pClient, PacketElementType userType,
+                                          NvSciSyncObj waiterSyncObj) override;
     virtual NvError UnregisterBufObj(NvSciBufObj bufObj) { return NvError_Success; }
     virtual NvError UnregisterSyncObj(NvSciSyncObj syncObj) { return NvError_Success; }
     virtual NvError GetMinPacketCount(CClientCommon *pClient, uint32_t *pPacketCount) override;
@@ -117,8 +116,8 @@ class CBaseModule : public CClientCommon::IModuleCallback
     std::mutex m_FrameMutex;
     std::chrono::time_point<std::chrono::steady_clock> m_uStarTimePoint{};
     std::chrono::time_point<std::chrono::steady_clock> m_uEndTimePoint{};
-    uint64_t m_uFrameNum{ 0U };
-    uint64_t m_uPrevFrameNum{ 0U };
+    uint64_t m_uFrameNum{0U};
+    uint64_t m_uPrevFrameNum{0U};
     /*
      * The profiler instance.
      */
@@ -143,9 +142,8 @@ class CBaseModule : public CClientCommon::IModuleCallback
      */
     MetaData *m_pMetaData = nullptr;
 
-  private:
-    struct BaseModuleOption
-    {
+private:
+    struct BaseModuleOption {
         std::string sLateMods = "";
         std::string sElems = "";
         bool bPassthrough = false;
@@ -161,8 +159,8 @@ class CBaseModule : public CClientCommon::IModuleCallback
 
     std::vector<std::shared_ptr<CClientCommon>> m_vspClients;
     IEventListener<CBaseModule> *m_pEventListener = nullptr;
-    uint32_t m_uClientSetupCompleteCount{ 0 };
-    uint32_t m_uClientConnectCount{ 0 };
+    uint32_t m_uClientSetupCompleteCount{0};
+    uint32_t m_uClientConnectCount{0};
     std::vector<NvSciBufObj> m_vBufObjs;
     std::vector<NvSciSyncObj> m_vSyncObjs;
     std::unique_ptr<CBufAggregator> m_upBufAggregator = nullptr;
@@ -171,7 +169,7 @@ class CBaseModule : public CClientCommon::IModuleCallback
     int m_numConsumers = 1;
     QueueType m_queueType = QueueType::Fifo;
 
-  protected:
+protected:
     std::shared_ptr<CSyncAggregator> m_spSyncAggregator = nullptr;
 
     std::unique_ptr<uint8_t[]> m_upOutputBuf = nullptr;
@@ -182,7 +180,7 @@ class CBaseModule : public CClientCommon::IModuleCallback
 
     BaseModuleOption m_baseModuleOption;
 
-  public:
+public:
     static const std::unordered_map<std::string, Option> m_baseModuleOptionTable;
 };
 #endif
