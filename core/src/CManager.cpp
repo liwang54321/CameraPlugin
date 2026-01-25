@@ -207,7 +207,7 @@ void CManager::MonitorThreadFunc()
 
     LOG_DBG("Enter: MonitorThreadFunc()\n");
     pthread_setname_np(pthread_self(), "MonitorThrd");
-
+    bool debug = getenv("SIPL_DEBUG") == nullptr? false : true;
     while (m_bMonitorThreadRunning) {
         if (m_bMonitorThreadPause) {
             std::unique_lock<std::mutex> lock(m_monitorThreadMutex);
@@ -218,11 +218,12 @@ void CManager::MonitorThreadFunc()
         auto uTimeElapsedMs =
             std::chrono::duration<double, std::milli>(std::chrono::steady_clock::now() - oStartTime).count();
         uTimeElapsedSum += uTimeElapsedMs;
-
-        std::cout << std::endl;
-        for (const auto &channel : m_vupChannels) {
-            channel->PrintFps();
+        if (debug) {
             std::cout << std::endl;
+            for (const auto &channel : m_vupChannels) {
+                channel->PrintFps();
+                std::cout << std::endl;
+            }
         }
 
         if (uRunDurationSec && (uTimeElapsedSum / 1000 >= uRunDurationSec)) {
@@ -314,12 +315,12 @@ void CManager::OnError(CChannel *channel, int moduleId, uint32_t errorId)
 void CManager::InputEventLoop()
 {
     LOG_DBG("Enter: InputEventLoop()\n");
-
+#if 0
     std::cout << "Enter 'q' to quit the application" << std::endl;
     std::cout << "Enter 's to suspend application" << std::endl;
     std::cout << "Enter 'r to resume application" << std::endl;
     std::cout << "-" << std::endl;
-
+#endif
     timeval timeout;
 
     while (m_bEventThreadRunning) {

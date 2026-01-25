@@ -1,0 +1,18 @@
+{
+    "CameraConfig": {
+        "cameras": [
+            {
+                "id": 0,
+                "name": "LEFT_FRONT",
+                "type": "RTP",
+                "rtp_ip": "224.0.0.130",
+                "port": 53304,
+                "dev_device": "",
+                "test_file": "",
+                "width": 1920,
+                "height": 1024,
+                "fps": 10
+            }
+        ]
+    }
+}

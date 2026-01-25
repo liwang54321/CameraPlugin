@@ -8,8 +8,6 @@
 #include "CStatusManager.hpp"
 #include "ConfigParser.hpp"
 
-
-
 class CameraPluginImpl {
 public:
     CameraPluginImpl(const CameraPluginParams &params)
@@ -56,20 +54,28 @@ public:
         }
 
         NvError error = NvError_Success;
-        uint32_t argc = 0;
-        const char *mask = GenerateBinaryString().c_str();
-        char *args[] = {"CameraPlugin",
-                             "-c",
-                             "ZEEKER_MULTIPLE_CAMERA",
-                             "-m",
-                             (char *)mask,
-                             "-p",
-                             "FileSrc=type=4:path=./"
-                             "FileSource_Test_Data:width=1920:height=1080,Cuda=filesink=1:width="
-                             "1920:height=1080"};
-
+        uint32_t argc = 7;
+        auto mask = GenerateBinaryString();
+        std::cout << "mask :" << mask << std::endl;
+        char *args[10] = {"CameraPlugin",
+                        "-c",
+                        "SIM_IMX623_30FPS_CPHY_x4",
+                        "-m",
+                        (char *)mask.c_str(),
+                        "-p",
+                        "FileSrc=type=4:path=./"
+                        "FileSource_Test_Data:width=1920:height=1280,Cuda=width="
+                        "1920:height=1280"};
+        bool is_debug = getenv("SIPL_DEBUG") == nullptr? false : true;
+        if(is_debug) {
+            args[7] = "-K";
+            args[8] = "-r";
+            args[9] = "10";
+            argc = 10;
+        }
         std::shared_ptr<CAppCfg> appCfg = std::make_shared<CAppCfg>();
         appCfg->RegisterCameraPlugin(camera_callback_);
+        appCfg->RegisterModuleInfo(maps_);
         CCmdLineParser cmdline;
         error = cmdline.Parse(argc, args, appCfg);
         if (NvError_EndOfFile == error) {
@@ -116,23 +122,19 @@ public:
 
 private:
     std::string GenerateBinaryString(void) {
-        unsigned int mask = 0;
+        constexpr int mapping[16] = {3, 2, 1, 0, 7, 6, 5, 4, 11, 10, 9, 8, 15, 14, 13, 12};
+
+        std::string result = "0000 0000 0000 0000";
+
         for (const auto &[num, _] : maps_) {
-            if (num >= 1 && num <= 16) {
-                mask |= (1 << (num - 1));
-            }
-        }
-
-        std::string result;
-        for (int i = 0; i < 16; i++) {
-            if (mask & (1 << (15 - i))) {
-                result += '1';
-            } else {
-                result += '0';
-            }
-
-            if (i % 4 == 3 && i != 15) {
-                result += ' ';
+            if (num >= 0 && num <= 15) {
+                for (int i = 0; i < 16; i++) {
+                    if (mapping[i] == num) {
+                        int str_pos = i + i / 4;
+                        result[str_pos] = '1';
+                        break;
+                    }
+                }
             }
         }
 

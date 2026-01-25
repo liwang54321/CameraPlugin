@@ -78,7 +78,8 @@ NvError CCudaModule::InitCuda()
 
     auto sensor_id = GetSensorId();
     auto config = m_pAppCfg->GetCameraConfig(sensor_id);
-    if(config) {
+    if (config == std::nullopt) {
+        LOG_ERR("Can not find this config for sensor id %d", sensor_id);
         return NvError_BadParameter;
     }
     m_cudaInputInfo.uCvtWidth = config->width;
@@ -108,7 +109,6 @@ NvError CCudaModule::InitCuda()
         PLOG_WARN("Car detection won't be enable because of init failed, Please check the model exist.\n");
         LOG_MSG("Running the cuda consumer without inference now ...\n");
     }
-#else
     LOG_MSG("Warning: Running the cuda consumer without inference now ...\n");
     LOG_MSG("Warning: If you want inference, please enable the compile switch NV_BUILD_CARDETECT\n");
 #endif
@@ -459,7 +459,7 @@ NvError CCudaModule::ProcessPayload(CClientCommon *pClient, uint32_t uPacketInde
 #endif
 
 // comment out in QNX temporarily
-#ifndef NVMEDIA_QNX
+#if 0
         {
             error = NvError_Success;
             cudaArray_t vaddr_plane[2] = { nullptr };

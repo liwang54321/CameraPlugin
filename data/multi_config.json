@@ -1,0 +1,51 @@
+{
+    "CameraConfig": {
+        "cameras": [
+            {
+                "id": 0,
+                "name": "LEFT_FRONT",
+                "type": "RTP",
+                "rtp_ip": "224.0.0.130",
+                "port": 53304,
+                "dev_device": "",
+                "test_file": "",
+                "width": 1920,
+                "height": 1024,
+                "fps": 30
+            },{
+                "id": 1,
+                "name": "LEFT_FRONT",
+                "type": "RTP",
+                "rtp_ip": "224.0.0.130",
+                "port": 53308,
+                "dev_device": "",
+                "test_file": "",
+                "width": 1920,
+                "height": 1024,
+                "fps": 30
+            },{
+                "id": 2,
+                "name": "LEFT_FRONT",
+                "type": "RTP",
+                "rtp_ip": "224.0.0.130",
+                "port": 53312,
+                "dev_device": "",
+                "test_file": "",
+                "width": 1920,
+                "height": 1024,
+                "fps": 10
+            },{
+                "id": 3,
+                "name": "LEFT_FRONT",
+                "type": "RTP",
+                "rtp_ip": "224.0.0.130",
+                "port": 53316,
+                "dev_device": "",
+                "test_file": "",
+                "width": 1920,
+                "height": 1024,
+                "fps": 10
+            }
+        ]
+    }
+}

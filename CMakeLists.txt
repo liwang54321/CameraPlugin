@@ -128,3 +128,4 @@ target_link_directories(CameraPluginExec PRIVATE ${PDK_PATH}/drive-linux/lib-tar
 # target_link_libraries(CameraPluginExec PRIVATE nvidia-kms nvrm_stream nvrm_chip nvrm_sync nvtegrahv nvsipl_devblk_cdi nvsipl_devblk_ddi nvsipl_devblk_crpyto)
 target_link_options(CameraPluginExec PRIVATE "-Wl,-rpath-link=${PDK_PATH}/drive-linux/lib-target/")
 target_include_directories(CameraPluginExec PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/plugin/include)
+target_include_directories(CameraPluginExec PRIVATE ${CUDA_INCLUDE_DIRS})

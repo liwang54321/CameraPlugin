@@ -64,10 +64,19 @@ NvError CFrameDecoder::Init()
         return NvError_BadParameter;
     }
 
-    sess_ = ctx_.create_session(src_ip_, dst_ip_);
+    sess_ = ctx_.create_session(dst_ip_, src_ip_);
+    if(sess_ == nullptr) {
+        LOG_ERR("Create RTP Sess Failed\n");
+        return NvError_BadParameter;
+    }
     int flags = RCE_RECEIVE_ONLY;
     receiver_ =
         sess_->create_stream(src_port_, RTP_FORMAT_H265, flags);
+    if (receiver_ == nullptr) {
+        LOG_ERR("Create RTP Receiver Failed");
+        return NvError_BadParameter;
+    }
+    LOG_INFO("Create Rtp Src Ip %s, Src Port %d, Dst Ip %s", src_ip_, src_port_, dst_ip_);
 
     m_clientCtx.pParser = nullptr;
     m_clientCtx.decodeWidth = GetFrameWidth();
@@ -446,7 +455,7 @@ int32_t CFrameDecoder::cbBeginSequence(void *ptr, const NvMediaParserSeqInfo *pn
 
     uint32_t decodeBuffers = pnvsi->uDecodeBuffers;
 
-    LOG_DBG("cbBeginSequence: %dx%d (disp: %dx%d) decode buffers: %d aspect: %d:%d fps: %f \n", pnvsi->uCodedWidth,
+    LOG_MSG("cbBeginSequence: %dx%d (disp: %dx%d) decode buffers: %d aspect: %d:%d fps: %f \n", pnvsi->uCodedWidth,
             pnvsi->uCodedHeight, pnvsi->uDisplayWidth, pnvsi->uDisplayHeight, pnvsi->uDecodeBuffers, pnvsi->uDARWidth,
             pnvsi->uDARHeight, pnvsi->fFrameRate);
 
@@ -754,10 +763,14 @@ EventStatus CFrameDecoder::Decode()
             std::this_thread::sleep_for(std::chrono::milliseconds(SLEEP_FOR_PACKET_MS));
         }
 
-        uvgrtp::frame::rtp_frame* frame = receiver_->pull_frame(SLEEP_FOR_PACKET_MS);
+        uvgrtp::frame::rtp_frame* frame = receiver_->pull_frame(SLEEP_FOR_PACKET_MS * 100);
         NvMediaBitStreamPkt packet;
         memset(&packet, 0, sizeof(NvMediaBitStreamPkt));
-        // size_t len = fread(m_codecStreamBuf, 1, uReadSize, m_inputCodecFile);
+        if (frame == nullptr) {
+            LOG_ERR("Rtp Time out for Sensor %d", GetSensorId());
+            continue;
+        }
+        LOG_INFO("Get Rtp Frame Size %d, timestamp %d, seq %d", frame->payload_len, frame->header.timestamp, frame->header.seq);
 
         auto p_data = frame->payload;
         auto data_len = frame->payload_len;
@@ -770,7 +783,7 @@ EventStatus CFrameDecoder::Decode()
         }
         packet.uDataLength = (uint32_t)data_len;
         packet.pByteStream = p_data;
-        packet.bEOS = feof(m_inputCodecFile) ? true : false;
+        packet.bEOS = m_clientCtx.bQuitDecoding.load();
         LOG_DBG("CFrameDecoder Decode: EOS %d is sent...\n", packet.bEOS);
         packet.bPTSValid = 0; // (pts != (uint32_t)-1);
         packet.llPts = 0;     // packet.bPTSValid ? (1000 * pts / 9)  : 0;    // 100 ns scale
@@ -784,17 +797,17 @@ EventStatus CFrameDecoder::Decode()
     NvMediaParserFlush(m_clientCtx.pParser);
     LOG_DBG("CFrameDecoder Decode: Finished decoding. Flushing parser and display.\n");
 
-    rewind(m_inputCodecFile);
+    // rewind(m_inputCodecFile);
     if (NvMediaParserGetAttribute(m_clientCtx.pParser, NvMParseAttr_GetBitstreamError, sizeof(uint32_t),
                                   &bitstream_error) == NVMEDIA_STATUS_OK) {
         LOG_DBG("CFrameDecoder Decode: Bitstream error after parsing %u.\n", bitstream_error);
     }
-
+#if 0
     if (feof(m_inputCodecFile)) {
         LOG_MSG("CFrameDecoder Decode: Decoding is completed, app exited!\n");
         return EventStatus::QUITTED;
     }
-
+#endif
     if (m_clientCtx.bQuitDecoding.load()) {
         LOG_WARN("CFrameDecoder Decode: Stop decoding, app quitted!\n");
         return EventStatus::QUITTED;

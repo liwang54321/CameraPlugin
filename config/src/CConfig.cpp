@@ -647,7 +647,7 @@ const std::vector<ElementInfo> *CModuleCfg::GetElementInfos(const std::string &s
     }
 
     if (pElementInfos == nullptr) {
-        LOG_MSG("Using default elemInfo.\n");
+        // LOG_MSG("Using default elemInfo.\n");
         pElementInfos = &vSingleElemInfos_Bl;
     }
 

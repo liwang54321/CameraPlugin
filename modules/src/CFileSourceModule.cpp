@@ -90,6 +90,10 @@ NvError CFileSourceModule::Init()
     }
 
     auto config = m_pAppCfg->GetCameraConfig(GetSensorId());
+    if (config == std::nullopt) {
+        LOG_ERR("Can not find this sensor id config %d", GetSensorId());
+        return NvError_BadParameter;
+    }
     m_fileSrcOption.uHeight = config->height;
     m_fileSrcOption.uWidth = config->width;
     static uint32_t id = 0;

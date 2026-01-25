@@ -1,15 +1,24 @@
-nvvideo
-nvos
-nvsocsys
-nvrm_surface
-nvscievent
-nvrm_mem
-nvvic
-nvrm_gpu
-gnat-24
-nvrm_host1x
-nvidia-kms
-nvsipl_devblk
-nvfusacap
-nvsipl_control
-nvparser
+[uvgRTP][INFO][::context] uvgRTP version: 3.1.6-540bfdc
+[uvgRTP][INFO][::bind_socket] The used address 224.0.0.130 is a multicast address
+[uvgRTP][INFO][::init_connection] Sending disabled for this stream
+cbBeginSequence: 1920x1024 (disp: 1920x1024) decode buffers: 4 aspect: 1920:1024 fps: 30.000000
+[uvgRTP][INFO][::context] uvgRTP version: 3.1.6-540bfdc
+[uvgRTP][INFO][::bind_socket] The used address 224.0.0.130 is a multicast address
+[uvgRTP][INFO][::init_connection] Sending disabled for this stream
+c0_FileSrc_0_Producer blocks are connected to the stream!
+cbBeginSequence: 1920x1024 (disp: 1920x1024) decode buffers: 4 aspect: 1920:1024 fps: 30.000000
+[uvgRTP][INFO][::context] uvgRTP version: 3.1.6-540bfdc
+[uvgRTP][INFO][::bind_socket] The used address 224.0.0.130 is a multicast address
+c0_FileSrc_1_Producer blocks are connected to the stream!
+[uvgRTP][INFO][::init_connection] Sending disabled for this stream
+cbBeginSequence: 1920x1024 (disp: 1920x1024) decode buffers: 4 aspect: 1920:1024 fps: 30.000000
+[uvgRTP][INFO][::context] uvgRTP version: 3.1.6-540bfdc
+[uvgRTP][INFO][::bind_socket] The used address 224.0.0.130 is a multicast address
+c0_FileSrc_2_Producer blocks are connected to the stream!
+[uvgRTP][INFO][::init_connection] Sending disabled for this stream
+cbBeginSequence: 1920x1024 (disp: 1920x1024) decode buffers: 4 aspect: 1920:1024 fps: 30.000000
+c0_FileSrc_3_Producer blocks are connected to the stream!
+c0_Cuda_0_Consumer0 blocks are connected to the stream!
+c0_Cuda_1_Consumer0 blocks are connected to the stream!
+c0_Cuda_2_Consumer0 blocks are connected to the stream!
+c0_Cuda_3_Consumer0 blocks are connected to the stream!

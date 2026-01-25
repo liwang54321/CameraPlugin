@@ -5,6 +5,6 @@
 cmake -Bbuild  -DCMAKE_TOOLCHAIN_FILE=../scripts/toolchain.cmake -DCMAKE_BUILD_TYPE=Debug -DBUILD_SHARED_LIBS=ON
 cmake --build build --verbose
 
-# sshpass -p nvidia scp build/VideoSource Config/test_config.json build/libyuvtorgb.so nvidia@192.168.1.22:~
+sshpass -p nvidia scp build/CameraPluginExec build/libCameraPlugin.so data/multi_config.json data/single_config.json nvidia@198.18.42.9:~
 
 
