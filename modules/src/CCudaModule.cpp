@@ -95,6 +95,8 @@ NvError CCudaModule::InitCuda()
     PCHK_CUDASTATUS_AND_RETURN(cudaStatus, "cudaMalloc m_pCvtDevPtrs");
     PLOG_DBG("Created consumer's CUDA stream.\n");
 
+    m_pCvtDevPtrsCpu.resize(image_size_);
+
 #if BUILD_CARDETECT
     // car detection
     if (m_cudaInputInfo.bUsePva)
@@ -476,29 +478,44 @@ NvError CCudaModule::ProcessPayload(CClientCommon *pClient, uint32_t uPacketInde
             }
         }
 #endif
-        error = BlToPlConvertWithGPU(uPacketIndex, output_buffer_);
-        if (error != NvError_Success) {
-            PLOG_ERR("BlToPlConvert failed: %u\n", error);
-            m_uOutputBufValidLen = 0;
-        } else {
-            PLOG_DBG("ProcessPayload succeed.\n");
-        }
-
-        auto cudaStatus = cudaNV12ToRGB(output_buffer_, (uchar3*)m_pCvtDevPtrs, m_cudaInputInfo.uWidth, m_cudaInputInfo.uHeight, m_streamWaiter);
-        PCHK_CUDASTATUS_AND_RETURN(cudaStatus, "cudaNV12ToRGB output_buffer_");
-
-        cudaStreamSynchronize(m_streamWaiter);
-        m_pAppCfg->CallCameraPlugin(GetSensorId(), time(NULL), (uint8_t *)m_pCvtDevPtrs, image_size_);
-
-        if (m_upFileSink) {
-            error = BlToPlConvert(uPacketIndex, (void *)m_upOutputBuf.get());
+        if(m_pAppCfg->GetMask() >> GetSensorId() & 0x01 == 0x01 ) {
+            error = BlToPlConvertWithGPU(uPacketIndex, output_buffer_);
             if (error != NvError_Success) {
-                PLOG_ERR("BlToPlConvert failed: %u\n", error);
+                PLOG_ERR("BlToPlConvertWithGPU failed: %u\n", error);
                 m_uOutputBufValidLen = 0;
             } else {
                 PLOG_DBG("ProcessPayload succeed.\n");
-                cudaStreamSynchronize(m_streamWaiter);
             }
+
+            auto cudaStatus = cudaNV12ToRGB(output_buffer_, (uchar3*)m_pCvtDevPtrs, m_cudaInputInfo.uWidth, m_cudaInputInfo.uHeight, m_streamWaiter);
+            PCHK_CUDASTATUS_AND_RETURN(cudaStatus, "cudaNV12ToRGB output_buffer_");
+
+            if (m_pAppCfg->IsCputOutput()) {
+                auto result =
+                    cudaMemcpyAsync(m_pCvtDevPtrsCpu.data(), m_pCvtDevPtrs, m_pCvtDevPtrsCpu.size(), cudaMemcpyKind::cudaMemcpyDeviceToHost, m_streamWaiter);
+                if (result != cudaSuccess) {
+                    PLOG_ERR("Cuda memcpy failed: %u\n", result);
+                    return NvError_ResourceError;
+                }
+                cudaStreamSynchronize(m_streamWaiter);
+                m_pAppCfg->CallCameraPlugin(GetSensorId(), time(NULL), (uint8_t *)m_pCvtDevPtrsCpu.data(), image_size_);
+
+            } else {
+                cudaStreamSynchronize(m_streamWaiter);
+                m_pAppCfg->CallCameraPlugin(GetSensorId(), time(NULL), (uint8_t *)m_pCvtDevPtrs, image_size_);
+            }
+#if 0
+            if (m_upFileSink) {
+                error = BlToPlConvert(uPacketIndex, (void *)m_upOutputBuf.get());
+                if (error != NvError_Success) {
+                    PLOG_ERR("BlToPlConvert failed: %u\n", error);
+                    m_uOutputBufValidLen = 0;
+                } else {
+                    PLOG_DBG("ProcessPayload succeed.\n");
+                    cudaStreamSynchronize(m_streamWaiter);
+                }
+            }
+#endif
         }
     } else if (bufAttr.layout == NvSciBufImage_PitchLinearType) {
         uint32_t uOffsetHost = 0U;

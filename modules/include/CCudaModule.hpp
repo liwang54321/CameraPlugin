@@ -97,6 +97,7 @@ class CCudaModule : public CBaseModule
     static const std::unordered_map<std::string, Option> m_cudaOptionTable;
     CUDAInputInfo m_cudaInputInfo;
     void *m_pCvtDevPtrs;
+    std::vector<uint8_t> m_pCvtDevPtrsCpu;
     void *output_buffer_;
     uint32_t image_size_ = 0;
 #if BUILD_CARDETECT

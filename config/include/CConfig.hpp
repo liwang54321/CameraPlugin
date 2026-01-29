@@ -23,6 +23,7 @@
 #include "CUtils.hpp"
 #include "Common.hpp"
 #include "nverror.h"
+#include <atomic>
 
 struct CameraConfig {
     uint32_t id;
@@ -104,6 +105,7 @@ struct PipelineGroup {
 #endif
 };
 
+constexpr uint8_t kMaxVideoChannelCount = 16;
 class CAppCfg
 {
   public:
@@ -157,12 +159,28 @@ class CAppCfg
 
     using CameraCallback =
     std::function<void(uint32_t cameraId, uint64_t timestamp, const uint8_t *payload, size_t size)>;
-    void RegisterCameraPlugin(CameraCallback cb) {
-        cb_ = std::move(cb);
+    void RegisterCameraPlugin(uint32_t cameraId,  CameraCallback cb) {
+        cb_[cameraId] = std::move(cb);
     }
 
     void CallCameraPlugin(uint32_t cameraId, uint64_t timestamp, const uint8_t *payload, size_t size) {
-        if(cb_) cb_(cameraId, timestamp, payload, size);
+        if(cb_[cameraId]) cb_[cameraId](cameraId, timestamp, payload, size);
+    }
+
+    void SetCpuOutPut(bool enable) {
+        is_cpu_sink_.store(enable);
+    }
+
+    bool IsCputOutput(void) {
+        return is_cpu_sink_;
+    }
+
+    void SetMask(uint16_t mask) {
+        mask_.store(mask);
+    }
+
+    uint16_t GetMask() {
+        return mask_;
     }
 
     void RegisterModuleInfo(const std::map<uint8_t, CameraStatus>& camera_configs)
@@ -197,8 +215,10 @@ class CAppCfg
     std::vector<CameraModuleInfo> m_vCameraModules;
     PipelineCfgTable m_pipelineCfgTable;
     std::vector<PipelineGroup> m_vPipelineGroups;
-    CameraCallback cb_;
+    CameraCallback cb_[kMaxVideoChannelCount];
     std::map<uint8_t, CameraStatus> camera_configs_;
+    std::atomic_bool is_cpu_sink_;
+    std::atomic_uint16_t mask_;
     // switch flag
     bool m_bIgnoreError = false;
     bool m_bShowVersion = false;

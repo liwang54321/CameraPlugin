@@ -1,6 +1,6 @@
 #pragma once
 
-#include "CameraPluginIf.hpp"
+#include "ICameraPlugin.hpp"
 #include <memory>
 
 using CameraEventCallback = std::function<void(uint32_t cameraId, uint32_t cameraStatus)>;
@@ -12,6 +12,7 @@ struct CameraPluginParams {
     bool enable_yuv_dump;
     bool enable_rgb_dump;
     bool enable_rtp_dump;
+    bool enable_cpu_sink;
 };
 
 class CameraPluginImpl;

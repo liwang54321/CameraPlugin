@@ -10,6 +10,7 @@ int main(int argc, char **argv) {
     params.enable_rgb_dump = false;
     params.enable_rtp_dump = false;
     params.enable_yuv_dump = false;
+    params.enable_cpu_sink = false;
     CameraPlugin plugin(params);
     if (plugin.loadConfig(argv[1]) != 0) {
         std::cout << "open " << argv[1] << " failed\n";
@@ -42,6 +43,7 @@ int main(int argc, char **argv) {
                                           std::to_string(count++) + ".raw",
                                       std::ios::trunc);
                     ofs.write((char *)data, size);
+                    free(data);
                 }
             })) {
         std::cout << "register  stream callback failed\n";

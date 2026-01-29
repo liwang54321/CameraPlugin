@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10.0)
-project(CameraPlugin VERSION 0.1.0 LANGUAGES C CXX)
+project(CameraPluginOrin VERSION 0.1.0 LANGUAGES C CXX)
 
 
 set(CMAKE_CXX_STANDARD 17)
@@ -30,7 +30,7 @@ set(CUDA_INCLUDE_DIRS ${CUDA_DIR}/targets/aarch64-linux/include)
 set(CUDA_LIB_DIRS ${CUDA_DIR}/targets/aarch64-linux/lib)
 enable_language(CUDA)
 
-add_library(CameraPlugin
+add_library(${PROJECT_NAME}
     ${CMAKE_CURRENT_SOURCE_DIR}/plugin/src/CameraPlugin.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/plugin/src/ConfigParser.cpp
 )
