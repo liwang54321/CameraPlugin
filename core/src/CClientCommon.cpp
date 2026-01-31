@@ -892,7 +892,7 @@ EventStatus CClientCommon::CheckConnection()
         }
     }
 
-    LOG_MSG(GetName() + " blocks are connected to the stream!\n");
+    // LOG_MSG(GetName() + " blocks are connected to the stream!\n");
     return EventStatus::CONNECTED;
 }
 

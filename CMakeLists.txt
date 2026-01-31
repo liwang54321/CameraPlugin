@@ -31,7 +31,7 @@ set(CUDA_LIB_DIRS ${CUDA_DIR}/targets/aarch64-linux/lib)
 enable_language(CUDA)
 
 add_library(${PROJECT_NAME}
-    ${CMAKE_CURRENT_SOURCE_DIR}/plugin/src/CameraPlugin.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/plugin/src/CameraPluginOrin.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/plugin/src/ConfigParser.cpp
 )
 

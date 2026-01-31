@@ -15,11 +15,11 @@ struct CameraPluginParams {
     bool enable_cpu_sink;
 };
 
-class CameraPluginImpl;
-class CameraPlugin : public ICameraPlugin {
+class CameraPluginOrinImpl;
+class CameraPluginOrin : public ICameraPlugin {
 public:
-    CameraPlugin(const CameraPluginParams &params);
-    ~CameraPlugin(void);
+    CameraPluginOrin(const CameraPluginParams &params);
+    ~CameraPluginOrin(void);
 
     int8_t loadConfig(const std::string &filename) override;
     int8_t open(void) override;
@@ -32,5 +32,5 @@ public:
     int8_t registerStreamCallback(uint32_t cameraId, CameraCallback function) override;
 
 private:
-    std::unique_ptr<CameraPluginImpl> impl_;
+    std::unique_ptr<CameraPluginOrinImpl> impl_;
 };
